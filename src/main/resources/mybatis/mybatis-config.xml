@@ -7,4 +7,7 @@
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 	</settings>
 
+	<typeAliases>
+		<typeAlias type="com.hanbit.team05.core.vo.ConsultVO" alias="ConsultVO"/>
+	</typeAliases>
 </configuration>
