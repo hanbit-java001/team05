@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -43,421 +43,360 @@
 
 <body id="page-top" class="index">
 
+
 	<!-- Navigation -->
 	<nav id="mainNav"
 		class="navbar navbar-default navbar-custom navbar-fixed-top">
-	<div class="container">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header page-scroll">
-			<button type="button" class="navbar-toggle" data-toggle="collapse"
-				data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span> Menu <i
-					class="fa fa-bars"></i>
-			</button>
-		<a class="navbar-brand page-scroll" href="#page-top"><img src="static/plugins/img/logo2.png" alt=""></a>
-		</div>
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> Menu <i
+						class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand page-scroll" href="#page-top"><img
+					src="static/plugins/img/logo2.png" alt=""></a>
+				<!-- 			<a class="navbar-brand page-scroll" href="#page-top">스카이정형외과</a> -->
+			</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse"
-			id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav navbar-right">
-				<li class="hidden"><a href="#page-top"></a></li>
-				<li><a class="page-scroll" href="#services">병원소개</a></li>
-				<li><a class="page-scroll" href="#portfolio">진료안내</a></li>
-				<li><a class="page-scroll" href="#about">시설둘러보기</a></li>
-				<li><a class="page-scroll" href="#team">상담접수</a></li>
-				<li><a class="page-scroll" href="#contact">찾아오시는길</a></li>
-			</ul>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="hidden"><a href="#page-top"></a></li>
+					<li><a class="page-scroll" href="#cta">병원소개</a></li>
+					<li><a class="page-scroll" href="#about">진료안내</a></li>
+					<li><a class="page-scroll" href="#portfolio">시설둘러보기</a></li>
+					<li><a class="page-scroll" href="#contact">상담접수</a></li>
+					<li><a class="page-scroll" href="#mapWrapper">찾아오시는길</a></li>
+					<li><a class="page-scroll" href="">로그인</a></li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
 		</div>
-		<!-- /.navbar-collapse -->
-	</div>
-	<!-- /.container-fluid --> </nav>
+		<!-- /.container-fluid -->
+	</nav>
 
 	<!-- Header -->
 	<header>
-	<div class="container">
-		<div class="intro-text">
-<!-- 			Welcome To Sky Orthopedics -->
-			<div class="intro-lead-in"><a href="#services" class="page-scroll btn btn-xl">뭘넣어야할지</a></div>
+		<div class="container">
+			<div class="intro-text"></div>
 		</div>
-	</div>
 	</header>
 
-	<!-- Services Section -->
-	<section id="services">
-	<div class="container">
 
-	</div>
+	<section id="cta">
+		<div class="cta-content">
+			<div class="container"></div>
+		</div>
+		<div class="overlay"></div>
 	</section>
 
-	<!-- Portfolio Grid Section -->
-	<section id="portfolio" class="bg-light-gray">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h2 class="section-heading">Portfolio</h2>
-				<h3 class="section-subheading text-muted">Lorem ipsum dolor sit
-					amet consectetur.</h3>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-4 col-sm-6 portfolio-item">
-				<a href="#portfolioModal1" class="portfolio-link"
-					data-toggle="modal">
-					<div class="portfolio-hover">
-						<div class="portfolio-hover-content">
-							<i class="fa fa-plus fa-3x"></i>
-						</div>
-					</div> <img src="static/plugins/img/portfolio/roundicons.png"
-					class="img-responsive" alt="">
-				</a>
-				<div class="portfolio-caption">
-					<h4>Round Icons</h4>
-					<p class="text-muted">Graphic Design</p>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 portfolio-item">
-				<a href="#portfolioModal2" class="portfolio-link"
-					data-toggle="modal">
-					<div class="portfolio-hover">
-						<div class="portfolio-hover-content">
-							<i class="fa fa-plus fa-3x"></i>
-						</div>
-					</div> <img src="static/plugins/img/portfolio/startup-framework.png"
-					class="img-responsive" alt="">
-				</a>
-				<div class="portfolio-caption">
-					<h4>Startup Framework</h4>
-					<p class="text-muted">Website Design</p>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 portfolio-item">
-				<a href="#portfolioModal3" class="portfolio-link"
-					data-toggle="modal">
-					<div class="portfolio-hover">
-						<div class="portfolio-hover-content">
-							<i class="fa fa-plus fa-3x"></i>
-						</div>
-					</div> <img src="static/plugins/img/portfolio/treehouse.png"
-					class="img-responsive" alt="">
-				</a>
-				<div class="portfolio-caption">
-					<h4>Treehouse</h4>
-					<p class="text-muted">Website Design</p>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 portfolio-item">
-				<a href="#portfolioModal4" class="portfolio-link"
-					data-toggle="modal">
-					<div class="portfolio-hover">
-						<div class="portfolio-hover-content">
-							<i class="fa fa-plus fa-3x"></i>
-						</div>
-					</div> <img src="static/plugins/img/portfolio/golden.png"
-					class="img-responsive" alt="">
-				</a>
-				<div class="portfolio-caption">
-					<h4>Golden</h4>
-					<p class="text-muted">Website Design</p>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 portfolio-item">
-				<a href="#portfolioModal5" class="portfolio-link"
-					data-toggle="modal">
-					<div class="portfolio-hover">
-						<div class="portfolio-hover-content">
-							<i class="fa fa-plus fa-3x"></i>
-						</div>
-					</div> <img src="static/plugins/img/portfolio/escape.png"
-					class="img-responsive" alt="">
-				</a>
-				<div class="portfolio-caption">
-					<h4>Escape</h4>
-					<p class="text-muted">Website Design</p>
-				</div>
-			</div>
-			<div class="col-md-4 col-sm-6 portfolio-item">
-				<a href="#portfolioModal6" class="portfolio-link"
-					data-toggle="modal">
-					<div class="portfolio-hover">
-						<div class="portfolio-hover-content">
-							<i class="fa fa-plus fa-3x"></i>
-						</div>
-					</div> <img src="static/plugins/img/portfolio/dreams.png"
-					class="img-responsive" alt="">
-				</a>
-				<div class="portfolio-caption">
-					<h4>Dreams</h4>
-					<p class="text-muted">Website Design</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	</section>
 
 	<!-- About Section -->
 	<section id="about">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h2 class="section-heading">About</h2>
-				<h3 class="section-subheading text-muted">Lorem ipsum dolor sit
-					amet consectetur.</h3>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-heading">About</h2>
+					<h3 class="section-subheading text-muted">Lorem ipsum dolor
+						sit amet consectetur.</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<ul class="timeline">
+						<li>
+							<div class="timeline-image">
+								<img class="img-circle img-responsive"
+									src="static/plugins/img/about/1.jpg" alt="">
+							</div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h4>2009-2011</h4>
+									<h4 class="subheading">Our Humble Beginnings</h4>
+								</div>
+								<div class="timeline-body">
+									<p class="text-muted">Lorem ipsum dolor sit amet,
+										consectetur adipisicing elit. Sunt ut voluptatum eius
+										sapiente, totam reiciendis temporibus qui quibusdam,
+										recusandae sit vero unde, sed, incidunt et ea quo dolore
+										laudantium consectetur!</p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted">
+							<div class="timeline-image">
+								<img class="img-circle img-responsive"
+									src="static/plugins/img/about/2.jpg" alt="">
+							</div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h4>March 2011</h4>
+									<h4 class="subheading">An Agency is Born</h4>
+								</div>
+								<div class="timeline-body">
+									<p class="text-muted">Lorem ipsum dolor sit amet,
+										consectetur adipisicing elit. Sunt ut voluptatum eius
+										sapiente, totam reiciendis temporibus qui quibusdam,
+										recusandae sit vero unde, sed, incidunt et ea quo dolore
+										laudantium consectetur!</p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="timeline-image">
+								<img class="img-circle img-responsive"
+									src="static/plugins/img/about/3.jpg" alt="">
+							</div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h4>December 2012</h4>
+									<h4 class="subheading">Transition to Full Service</h4>
+								</div>
+								<div class="timeline-body">
+									<p class="text-muted">Lorem ipsum dolor sit amet,
+										consectetur adipisicing elit. Sunt ut voluptatum eius
+										sapiente, totam reiciendis temporibus qui quibusdam,
+										recusandae sit vero unde, sed, incidunt et ea quo dolore
+										laudantium consectetur!</p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted">
+							<div class="timeline-image">
+								<img class="img-circle img-responsive"
+									src="static/plugins/img/about/4.jpg" alt="">
+							</div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h4>July 2014</h4>
+									<h4 class="subheading">Phase Two Expansion</h4>
+								</div>
+								<div class="timeline-body">
+									<p class="text-muted">Lorem ipsum dolor sit amet,
+										consectetur adipisicing elit. Sunt ut voluptatum eius
+										sapiente, totam reiciendis temporibus qui quibusdam,
+										recusandae sit vero unde, sed, incidunt et ea quo dolore
+										laudantium consectetur!</p>
+								</div>
+							</div>
+						</li>
+						<li class="timeline-inverted">
+							<div class="timeline-image">
+								<h4>
+									Be Part <br>Of Our <br>Story!
+								</h4>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<ul class="timeline">
-					<li>
-						<div class="timeline-image">
-							<img class="img-circle img-responsive"
-								src="static/plugins/img/about/1.jpg" alt="">
-						</div>
-						<div class="timeline-panel">
-							<div class="timeline-heading">
-								<h4>2009-2011</h4>
-								<h4 class="subheading">Our Humble Beginnings</h4>
-							</div>
-							<div class="timeline-body">
-								<p class="text-muted">Lorem ipsum dolor sit amet,
-									consectetur adipisicing elit. Sunt ut voluptatum eius sapiente,
-									totam reiciendis temporibus qui quibusdam, recusandae sit vero
-									unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-							</div>
-						</div>
-					</li>
-					<li class="timeline-inverted">
-						<div class="timeline-image">
-							<img class="img-circle img-responsive"
-								src="static/plugins/img/about/2.jpg" alt="">
-						</div>
-						<div class="timeline-panel">
-							<div class="timeline-heading">
-								<h4>March 2011</h4>
-								<h4 class="subheading">An Agency is Born</h4>
-							</div>
-							<div class="timeline-body">
-								<p class="text-muted">Lorem ipsum dolor sit amet,
-									consectetur adipisicing elit. Sunt ut voluptatum eius sapiente,
-									totam reiciendis temporibus qui quibusdam, recusandae sit vero
-									unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="timeline-image">
-							<img class="img-circle img-responsive"
-								src="static/plugins/img/about/3.jpg" alt="">
-						</div>
-						<div class="timeline-panel">
-							<div class="timeline-heading">
-								<h4>December 2012</h4>
-								<h4 class="subheading">Transition to Full Service</h4>
-							</div>
-							<div class="timeline-body">
-								<p class="text-muted">Lorem ipsum dolor sit amet,
-									consectetur adipisicing elit. Sunt ut voluptatum eius sapiente,
-									totam reiciendis temporibus qui quibusdam, recusandae sit vero
-									unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-							</div>
-						</div>
-					</li>
-					<li class="timeline-inverted">
-						<div class="timeline-image">
-							<img class="img-circle img-responsive"
-								src="static/plugins/img/about/4.jpg" alt="">
-						</div>
-						<div class="timeline-panel">
-							<div class="timeline-heading">
-								<h4>July 2014</h4>
-								<h4 class="subheading">Phase Two Expansion</h4>
-							</div>
-							<div class="timeline-body">
-								<p class="text-muted">Lorem ipsum dolor sit amet,
-									consectetur adipisicing elit. Sunt ut voluptatum eius sapiente,
-									totam reiciendis temporibus qui quibusdam, recusandae sit vero
-									unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-							</div>
-						</div>
-					</li>
-					<li class="timeline-inverted">
-						<div class="timeline-image">
-							<h4>
-								Be Part <br>Of Our <br>Story!
-							</h4>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
 	</section>
 
-	<!-- Team Section -->
-	<section id="team" class="bg-light-gray">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h2 class="section-heading">Our Amazing Team</h2>
-				<h3 class="section-subheading text-muted">Lorem ipsum dolor sit
-					amet consectetur.</h3>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-4">
-				<div class="team-member">
-					<img src="static/plugins/img/team/1.jpg"
-						class="img-responsive img-circle" alt="">
-					<h4>Kay Garland</h4>
-					<p class="text-muted">Lead Designer</p>
-					<ul class="list-inline social-buttons">
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="team-member">
-					<img src="static/plugins/img/team/2.jpg"
-						class="img-responsive img-circle" alt="">
-					<h4>Larry Parker</h4>
-					<p class="text-muted">Lead Marketer</p>
-					<ul class="list-inline social-buttons">
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<div class="team-member">
-					<img src="static/plugins/img/team/3.jpg"
-						class="img-responsive img-circle" alt="">
-					<h4>Diana Pertersen</h4>
-					<p class="text-muted">Lead Developer</p>
-					<ul class="list-inline social-buttons">
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-8 col-lg-offset-2 text-center">
-				<p class="large text-muted">Lorem ipsum dolor sit amet,
-					consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos
-					non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-			</div>
-		</div>
-	</div>
-	</section>
 
-	<!-- Clients Aside -->
-	<aside class="clients">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3 col-sm-6">
-				<a href="#"> <img src="static/plugins/img/logos/envato.jpg"
-					class="img-responsive img-centered" alt="">
-				</a>
+	<!-- Portfolio Grid Section -->
+	<section id="portfolio" class="bg-light-gray">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h3 class="section-heading">스카이정형외과</h3>
+					<h3 class="section-heading">시설</h3>
+				</div>
 			</div>
-			<div class="col-md-3 col-sm-6">
-				<a href="#"> <img src="static/plugins/img/logos/designmodo.jpg"
-					class="img-responsive img-centered" alt="">
-				</a>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<a href="#"> <img src="static/plugins/img/logos/themeforest.jpg"
-					class="img-responsive img-centered" alt="">
-				</a>
-			</div>
-			<div class="col-md-3 col-sm-6">
-				<a href="#"> <img
-					src="static/plugins/img/logos/creative-market.jpg"
-					class="img-responsive img-centered" alt="">
-				</a>
+			<div class="row">
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a href="#portfolioModal1" class="portfolio-link"
+						data-toggle="modal">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img src="static/plugins/img/portfolio/입원실1.jpg"
+						class="img-responsive" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>입원실</h4>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a href="#portfolioModal2" class="portfolio-link"
+						data-toggle="modal">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img src="static/plugins/img/portfolio/입원실2.jpg"
+						class="img-responsive" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>입원실</h4>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a href="#portfolioModal3" class="portfolio-link"
+						data-toggle="modal">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img src="static/plugins/img/portfolio/입원실3.jpg"
+						class="img-responsive" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>입원실</h4>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a href="#portfolioModal4" class="portfolio-link"
+						data-toggle="modal">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img src="static/plugins/img/portfolio/수술실1.jpg"
+						class="img-responsive" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>수술실</h4>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a href="#portfolioModal5" class="portfolio-link"
+						data-toggle="modal">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img src="static/plugins/img/portfolio/방사선2.jpg"
+						class="img-responsive" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>방사선실</h4>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 portfolio-item">
+					<a href="#portfolioModal6" class="portfolio-link"
+						data-toggle="modal">
+						<div class="portfolio-hover">
+							<div class="portfolio-hover-content">
+								<i class="fa fa-plus fa-3x"></i>
+							</div>
+						</div> <img src="static/plugins/img/portfolio/방사선2.jpg"
+						class="img-responsive" alt="">
+					</a>
+					<div class="portfolio-caption">
+						<h4>방사선실</h4>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
-	</aside>
+	</section>
 
 	<!-- Contact Section -->
 	<section id="contact">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-12 text-center">
-				<h2 class="section-heading">Contact Us</h2>
-				<h3 class="section-subheading text-muted">Lorem ipsum dolor sit
-					amet consectetur.</h3>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="section-subheading">상담접수</h2>
+					<h3 class="section-subheading">원하시는 내용을 써서 보내주세요. 답변해드리겠습니다.</h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<form name="sentMessage" id="contactForm" novalidate>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="이름"
+										id="name" required
+										data-validation-required-message="이름을 넣어주시길 바랍니다.">
+									<p class="help-block text-danger"></p>
+								</div>
+								<div class="form-group">
+									<input type="이메일" class="form-control" placeholder="이메일 주소"
+										id="email" required
+										data-validation-required-message="이메일주소를 넣어주시길 바랍니다.">
+									<p class="help-block text-danger"></p>
+								</div>
+								<div class="form-group">
+									<input type="tel" class="form-control" placeholder="휴대폰 번호"
+										id="phone" required
+										data-validation-required-message="휴대폰번호를 넣어주시길 바랍니다.">
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<textarea class="form-control" placeholder="상담 내용" id="message"
+										required data-validation-required-message="상담내용을 넣어주시길 바랍니다."></textarea>
+									<p class="help-block text-danger"></p>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+							<div class="col-lg-12 text-center">
+								<div id="success"></div>
+								<button type="submit" class="btn btn-xl">보내기</button>
+							</div>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-12">
-				<form name="sentMessage" id="contactForm" novalidate>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<input type="text" class="form-control"
-									placeholder="Your Name *" id="name" required
-									data-validation-required-message="Please enter your name.">
-								<p class="help-block text-danger"></p>
-							</div>
-							<div class="form-group">
-								<input type="email" class="form-control"
-									placeholder="Your Email *" id="email" required
-									data-validation-required-message="Please enter your email address.">
-								<p class="help-block text-danger"></p>
-							</div>
-							<div class="form-group">
-								<input type="tel" class="form-control"
-									placeholder="Your Phone *" id="phone" required
-									data-validation-required-message="Please enter your phone number.">
-								<p class="help-block text-danger"></p>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<textarea class="form-control" placeholder="Your Message *"
-									id="message" required
-									data-validation-required-message="Please enter a message."></textarea>
-								<p class="help-block text-danger"></p>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-						<div class="col-lg-12 text-center">
-							<div id="success"></div>
-							<button type="submit" class="btn btn-xl">Send Message</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+	</section>
+
+	<script>
+		var map;
+
+		var pos = {
+				lat : 37.5641694,
+				lng : 126.810789
+		}
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map'), {
+				center : pos,
+				zoom : 18
+			});
+			setMarker();
+		}
+
+		function setMarker() {
+			marker = new google.maps.Marker({
+				map:map,
+				position : pos
+			});
+		}
+	</script>
+
+
+	<section id="mapWrapper">
+		<div id="map" class="container" style="height:400px;"></div>
+		<h2 class="text-center">서울특별시 강서구 방화동 614-34 메디스타워 2층</h2>
 	</section>
 
 	<footer>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<span class="copyright">Copyright &copy; Your Website 2016</span>
-			</div>
-			<div class="col-md-4">
-				<ul class="list-inline social-buttons">
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-				</ul>
-			</div>
-			<div class="col-md-4">
-				<ul class="list-inline quicklinks">
-					<li><a href="#">Privacy Policy</a></li>
-					<li><a href="#">Terms of Use</a></li>
-				</ul>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<span class="copyright">&copy; 원장 김동환</span>
+				</div>
+				<div class="col-md-4">
+					<ul class="list-inline social-buttons">
+						<li><a href="#"><i>ㅋㅋ</i></a></li>
+						<li><a href="#"><i>ㅋㅋ</i></a></li>
+						<li><a href="#"><i>ㅋㅋ</i></a></li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<ul class="list-inline quicklinks">
+						<li><a href="#">민창훈</a></li>
+						<li><a href="#">서동수</a></li>
+					</ul>
+				</div>
 			</div>
 		</div>
-	</div>
 	</footer>
 
 	<!-- Portfolio Modals -->
@@ -478,31 +417,15 @@
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
 								<!-- Project Details Go Here -->
-								<h2>Project Name</h2>
-								<p class="item-intro text-muted">Lorem ipsum dolor sit amet
-									consectetur.</p>
+								<h2>입원실 내부모습입니다.</h2>
+								<p class="item-intro text-muted">--------TEST---------</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/roundicons-free.png" alt="">
-								<p>Use this area to describe your project. Lorem ipsum dolor
-									sit amet, consectetur adipisicing elit. Est blanditiis dolorem
-									culpa incidunt minus dignissimos deserunt repellat aperiam
-									quasi sunt officia expedita beatae cupiditate, maiores
-									repudiandae, nostrum, reiciendis facere nemo!</p>
-								<p>
-									<strong>Want these icons in this portfolio item
-										sample?</strong>You can download 60 of them for free, courtesy of <a
-										href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>,
-									or you can purchase the 1500 icon set <a
-										href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.
-								</p>
-								<ul class="list-inline">
-									<li>Date: July 2014</li>
-									<li>Client: Round Icons</li>
-									<li>Category: Graphic Design</li>
-								</ul>
+									src="static/plugins/img/portfolio/입원실1.jpg" alt="">
+								<p>안녕하세요. 스카이정형외과 입원실 내부모습입니다.</p>
+
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
-									<i class="fa fa-times"></i> Close Project
+									닫기<i class="fa fa-times"></i>
 								</button>
 							</div>
 						</div>
@@ -526,30 +449,16 @@
 					<div class="row">
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
-								<h2>Project Heading</h2>
-								<p class="item-intro text-muted">Lorem ipsum dolor sit amet
-									consectetur.</p>
+								<h2>입원실 두번쨰모습입니다.</h2>
+								<p class="item-intro text-muted">-----TEST-----</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/startup-framework-preview.png"
-									alt="">
+									src="static/plugins/img/portfolio/입원실2.jpg" alt="">
+								<p>안녕하세요. 스카이정형외과 입원실 내부모습입니다.</p>
 								<p>
-									<a href="http://designmodo.com/startup/?u=787">Startup
-										Framework</a> is a website builder for professionals. Startup
-									Framework contains components and complex blocks (PSD+HTML
-									Bootstrap themes and templates) which can easily be integrated
-									into almost any design. All of these components are made in the
-									same style, and can easily be integrated into projects,
-									allowing you to create hundreds of solutions for your future
-									projects.
-								</p>
-								<p>
-									You can preview Startup Framework <a
-										href="http://designmodo.com/startup/?u=787">here</a>.
-								</p>
-								<button type="button" class="btn btn-primary"
-									data-dismiss="modal">
-									<i class="fa fa-times"></i> Close Project
-								</button>
+									<button type="button" class="btn btn-primary"
+										data-dismiss="modal">
+										닫기<i class="fa fa-times"></i>
+									</button>
 							</div>
 						</div>
 					</div>
@@ -573,26 +482,15 @@
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
 								<!-- Project Details Go Here -->
-								<h2>Project Name</h2>
-								<p class="item-intro text-muted">Lorem ipsum dolor sit amet
-									consectetur.</p>
+								<h2>입원실 세번쨰모습입니다.</h2>
+								<p class="item-intro text-muted">------TEST-------</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/treehouse-preview.png" alt="">
-								<p>
-									Treehouse is a free PSD web template built by <a
-										href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>.
-									This is bright and spacious design perfect for people or
-									startup companies looking to showcase their apps or other
-									projects.
-								</p>
-								<p>
-									You can download the PSD template in this portfolio sample item
-									at <a
-										href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.
-								</p>
+									src="static/plugins/img/portfolio/입원실3.jpg" alt="">
+								<p>안녕하세요. 스카이정형외과 입원실 내부모습입니다.</p>
+
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
-									<i class="fa fa-times"></i> Close Project
+									닫기<i class="fa fa-times"></i>
 								</button>
 							</div>
 						</div>
@@ -617,28 +515,14 @@
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
 								<!-- Project Details Go Here -->
-								<h2>Project Name</h2>
-								<p class="item-intro text-muted">Lorem ipsum dolor sit amet
-									consectetur.</p>
+								<h2>스카이정형외과 수술실 내부입니다.</h2>
+								<p class="item-intro text-muted">----TEST----</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/golden-preview.png" alt="">
-								<p>
-									Start Bootstrap's Agency theme is based on Golden, a free PSD
-									website template built by <a
-										href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>.
-									Golden is a modern and clean one page web template that was
-									made exclusively for Best PSD Freebies. This template has a
-									great portfolio, timeline, and meet your team sections that can
-									be easily modified to fit your needs.
-								</p>
-								<p>
-									You can download the PSD template in this portfolio sample item
-									at <a
-										href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.
-								</p>
+									src="static/plugins/img/portfolio/수술실1.jpg" alt="">
+								<p>안녕하세요. 스카이정형외과 수술실입니다.</p>
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
-									<i class="fa fa-times"></i> Close Project
+									닫기<i class="fa fa-times"></i>
 								</button>
 							</div>
 						</div>
@@ -663,27 +547,14 @@
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
 								<!-- Project Details Go Here -->
-								<h2>Project Name</h2>
-								<p class="item-intro text-muted">Lorem ipsum dolor sit amet
-									consectetur.</p>
+								<h2>스카이정형외과 방사선실 내부입니다.</h2>
+								<p class="item-intro text-muted">---TEST----</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/escape-preview.png" alt="">
-								<p>
-									Escape is a free PSD web template built by <a
-										href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>.
-									Escape is a one page web template that was designed with
-									agencies in mind. This template is ideal for those looking for
-									a simple one page solution to describe your business and offer
-									your services.
-								</p>
-								<p>
-									You can download the PSD template in this portfolio sample item
-									at <a
-										href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.
-								</p>
+									src="static/plugins/img/portfolio/방사선2.jpg" alt="">
+								<p>안녕하세요. 스카이정형외과 방사선실입니다.</p>
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
-									<i class="fa fa-times"></i> Close Project
+									닫기<i class="fa fa-times"></i>
 								</button>
 							</div>
 						</div>
@@ -708,26 +579,13 @@
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
 								<!-- Project Details Go Here -->
-								<h2>Project Name</h2>
-								<p class="item-intro text-muted">Lorem ipsum dolor sit amet
-									consectetur.</p>
+								<h2>사진</h2>
+								<p class="item-intro text-muted">TEST</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/dreams-preview.png" alt="">
-								<p>
-									Dreams is a free PSD web template built by <a
-										href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>.
-									Dreams is a modern one page web template designed for almost
-									any purpose. It’s a beautiful template that’s designed with the
-									Bootstrap framework in mind.
-								</p>
-								<p>
-									You can download the PSD template in this portfolio sample item
-									at <a
-										href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.
-								</p>
+									src="static/plugins/img/portfolio/방사선2.jpg" alt="">
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
-									<i class="fa fa-times"></i> Close Project
+									닫기<i class="fa fa-times"></i>
 								</button>
 							</div>
 						</div>
@@ -738,7 +596,7 @@
 	</div>
 
 	<!-- jQuery -->
-	<script src="static/plugins/vendor/jquery/jquery.min.js"></script>
+	<script src="static/plugins/jquery/jquery-3.1.0.min.js"></script>
 
 	<!-- Bootstrap Core JavaScript -->
 	<script src="static/plugins/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -753,6 +611,9 @@
 
 	<!-- Theme JavaScript -->
 	<script src="static/plugins/js/agency.js"></script>
+
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl4ru4utIETl0wXbGlo2pzeUJ-xJfYnKo&callback=initMap"></script>
 
 </body>
 
