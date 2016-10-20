@@ -9,5 +9,7 @@
 
 	<typeAliases>
 		<typeAlias type="com.hanbit.team05.core.vo.ConsultVO" alias="ConsultVO"/>
+		<typeAlias type="com.hanbit.team05.core.vo.MemberVO" alias="MemberVO"/>
 	</typeAliases>
+
 </configuration>

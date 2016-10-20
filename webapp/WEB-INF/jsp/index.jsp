@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,10 +37,10 @@
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!-- [if lt IE 9] -->
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script
+	src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <!--     [endif] -->
-
 <body id="page-top" class="index">
 
 	<nav id="mainNav"
@@ -49,7 +50,7 @@
 			<div class="navbar-header page-scroll">
 				<button type="button" class="navbar-toggle" data-toggle="collapse"
 					data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span> Memu <i
+					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
 				<a class="navbar-brand page-scroll" href="#page-top"><img
@@ -82,23 +83,47 @@
 		</div>
 	</header>
 
+
 	<section id="about">
+
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2 class="section-heading">병원소개</h2>
-					<h5 class="section-subheading">
-						지하철 9호선 공항시장역 2번출구 <br> <br> 바로앞, 지하철 5호선 송정역 1번 출구에서
-						50m 에 위치한 스카이 정형외과입니다. <br> <br> 다년간의 임상경험과 최신식 시설, 따뜻한
-						가슴,친절한 미소로 어깨, 허리, 목, 팔꿈치, 발목, 손목등 <br> <br> 정형외과, 신경외과,
-						재활의학과, 통증의학과등 근골격계 전반의 통증과 불편함에 대하여 <br> <br> 수술치료와
-						비수술치료(약물,주사,물리치료,충격파치료등등)로 최선의 진료를 다하고 있습니다. <br> <br>
-						필름을 사용하지 않는 최신식 X-ray 와 PACS 시스템, 전신골밀도 검사 및 초음파를 통한 <br> <br>
-						정확한 진단으로 통증과 불편함의 원인을 찾고 그에 따른 최선의 진료를 하는 스카이 정형외과입니다.
-					</h5>
+					<div id="myCarousel" class="carousel slide" data-ride="carousel">
+						<h2 class="section-heading">병원소개</h2>
+<!-- 						Indicators -->
+<!-- 						<ol class="carousel-indicators"> -->
+<!-- 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li> -->
+<!-- 							<li data-target="#myCarousel" data-slide-to="1"></li> -->
+<!-- 							<li data-target="#myCarousel" data-slide-to="2"></li> -->
+<!-- 							<li data-target="#myCarousel" data-slide-to="3"></li> -->
+<!-- 						</ol> -->
+
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner" role="listbox">
+							<a class="left carousel-control" href="#myCarousel" role="button"
+								data-slide="prev"> <span
+								class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a> <a class="right carousel-control" href="#myCarousel"
+								role="button" data-slide="next"> <span
+								class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+
+						<h5 class="section-subheading">
+							지하철 9호선 공항시장역 2번출구 <br> <br> 바로앞, 지하철 5호선 송정역 1번 출구에서
+							50m 에 위치한 스카이 정형외과입니다. <br> <br> 다년간의 임상경험과 최신식 시설, 따뜻한
+							가슴,친절한 미소로 어깨, 허리, 목, 팔꿈치, 발목, 손목등 <br> <br> 정형외과,
+							신경외과, 재활의학과, 통증의학과등 근골격계 전반의 통증과 불편함에 대하여 <br> <br>
+							수술치료와 비수술치료(약물,주사,물리치료,충격파치료등등)로 최선의 진료를 다하고 있습니다. <br> <br>
+							필름을 사용하지 않는 최신식 X-ray 와 PACS 시스템, 전신골밀도 검사 및 초음파를 통한 <br> <br>
+							정확한 진단으로 통증과 불편함의 원인을 찾고 그에 따른 최선의 진료를 하는 스카이 정형외과입니다.
+						</h5>
+					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 
 
@@ -182,7 +207,7 @@
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>
 							</div>
-						</div> <img src="static/plugins/img/portfolio/방사선2.jpg"
+						</div> <img src="static/plugins/img/portfolio/방사선실 (1).JPG"
 						class="img-responsive" alt="">
 					</a>
 					<div class="portfolio-caption">
@@ -196,7 +221,7 @@
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>
 							</div>
-						</div> <img src="static/plugins/img/portfolio/방사선2.jpg"
+						</div> <img src="static/plugins/img/portfolio/방사선실 (1).JPG"
 						class="img-responsive" alt="">
 					</a>
 					<div class="portfolio-caption">
@@ -222,17 +247,17 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="이름"
-									id="name">
+									id="sendName">
 								<p class="help-block text-danger"></p>
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control"
-									placeholder="이메일 주소 (답변을 위해 이메일은 반드시 제대로 적어주셔야합니다.)" id="email">
+									placeholder="이메일 주소 (답변을 위해 이메일은 반드시 제대로 적어주셔야합니다.)" id="sendEmail">
 								<p class="help-block text-danger"></p>
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="휴대폰 번호"
-									id="phone">
+									id="sendPhone">
 
 								<p class="help-block text-danger"></p>
 							</div>
@@ -266,17 +291,43 @@
 			<i class="btnLoginClose fa fa-times fa-2" aria-hidden="true"></i>
 		</div>
 		<div class="form-group">
-			<label for="usr">아이디 : </label> <input type="text"
-				class="form-control" id="usr">
+			<label for="usr">이메일 : </label> <input type="text"
+				class="form-control" id="usr" placeholder="이메일">
 
 		</div>
 		<div class="form-group">
-			<label for="pwd">비밀번호 :</label> <input type="password"
-				class="form-control" id="pwd">
+			<label for="pw">비밀번호 :</label> <input type="password"
+				class="form-control" id="pwd" placeholder="비밀번호">
 		</div>
 		<div class="bottom-button">
 			<button class="btnLogin btn btn-success">확인</button>
 			<button class="btnLoginClose btn btn-default">취소</button>
+		</div>
+	</section>
+
+	<section id="join-form">
+		<div class="font-position">
+			<i class="btnJoinClose fa fa-times fa-2" aria-hidden="true"></i>
+		</div>
+			<div class="form-group">
+			<label for="name">이름 : </label>
+			<input type="text" class="form-control" id="name" placeholder="이름">
+		</div>
+		<div class="form-group">
+			<label for="email">이메일 : </label>
+			<input type="text" class="form-control" id="email" placeholder="이메일">
+		</div>
+		<div class="form-group">
+			<label for="joinpw">비밀번호 :</label>
+			<input type="password" class="form-control" id="joinpw" placeholder="비밀번호">
+		</div>
+		<div class="form-group">
+			<label for="currentpwd">비밀번호확인 :</label>
+			<input type="password" class="form-control" id="currentpwd" placeholder="비밀번호확인">
+		</div>
+		<div class="bottom-button">
+			<button class="btnJoin btn btn-primary">회원가입</button>
+			<button class="btnJoinClose btn btn-default">취소</button>
 		</div>
 	</section>
 
@@ -442,7 +493,7 @@
 								<h2>스카이정형외과 방사선실 내부입니다.</h2>
 								<p class="item-intro text-muted">---TEST----</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/방사선2.jpg" alt="">
+									src="static/plugins/img/portfolio/방사선실 (1).JPG" alt="">
 								<p>안녕하세요. 스카이정형외과 방사선실입니다.</p>
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
@@ -473,7 +524,7 @@
 								<h2>사진</h2>
 								<p class="item-intro text-muted">TEST</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/방사선2.jpg" alt="">
+									src="static/plugins/img/portfolio/방사선실 (1).JPG" alt="">
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
 									닫기<i class="fa fa-times"></i>

@@ -31,41 +31,96 @@ $(document).ready(function() {
 		$("#login-form").fadeOut();
 	}
 
-	function applyConsult() {
+	function joinFadeIn() {
+		$("#join-form").fadeIn();
+	}
 
-		var name = $("#name").val().trim();
-		var email = $("#email").val().trim();
-		var phone = $("#phone").val().trim();
-		var message = $("#message").val().trim();
-
-		if (name == "") {
-		}
-		if (email == "") {
-		}
-		if (phone == "") {
-		}
+	function joinFadeOut() {
+		$("#join-form").fadeOut();
 	}
 
 	$(".page-member").bind('click', function() {
 		var pageText = $(this).attr("href");
 
 		if (pageText == "#login") {
+			joinFadeOut();
 			loginFadeIn();
 		} else if (pageText == "#join") {
-
+			loginFadeOut();
+			joinFadeIn();
 		}
 	})
 
-	$(".btnLogin").on("click", function() {
+		$(".btnLoginClose").on("click", function() {
 		loginFadeOut();
 	});
 
-	$(".btnLoginClose").on("click", function() {
-		loginFadeOut();
+	$(".btnJoinClose").on("click", function() {
+		joinFadeOut();
 	});
+
+
+	$(".btnLogin").on("click", function() {
+
+		var id = $("usr").val();
+		var pw = $("pwd").val();
+
+		$.ajax({
+			url : "/api/member/login",
+			method : "POST",
+			dataType : "json",
+			data : {
+				mId : id,
+				pwd : pw
+			}
+		}).done(function(result) {
+		})
+	});
+
+	$(".btnJoin").on("click", function() {
+
+		var member = {
+			name : $("#name").val(),
+			email : $("#email").val(),
+			password : $("#joinpw").val(),
+			currentPassword : $("#currentpwd").val()
+		};
+
+		$.ajax({
+			url : "/api/member/join",
+			method : "POST",
+			dataType : "json",
+			contentType : "application/json; charset=utf-8",
+			data : JSON.stringify(member)
+		}).done(function(result) {
+			alert("회원가입을 성공적으로 완료하였습니다.");
+		})
+	})
 
 	$(".sendMessage").on("click", function() {
 		applyConsult();
 	});
+
+	function inputImage(imgStartNum, imgEndNum, className, html1, html2){
+
+		for(var i = imgStartNum; i <= imgEndNum; i++){
+		$(className).append(html + i + html2);
+		}
+	}
+
+	var html = "";
+	var html2 = "";
+	html += "<div class='item active' ";
+	html += "style=\"background-image:url('/static";
+	html += "/plugins/img/병원분들사진 (";
+	html2 += ").JPG')\"></div>";
+	inputImage(1, 1, ".carousel-inner", html, html2);
+	html = "";
+	html2 = "";
+	html += "<div class='item' ";
+	html += "style=\"background-image:url('/static";
+	html += "/plugins/img/병원분들사진 (";
+	html2 += ").JPG')\"></div>";
+	inputImage(2, 4, ".carousel-inner", html, html2);
 
 })
