@@ -28,10 +28,6 @@ public class MemberController {
 	@ResponseBody
 	public int join(@RequestBody MemberVO member) {
 		int result = memberService.joinMember(member);
-		if (result != 1) {
-			throw new RuntimeException("error");
-		}
-
 		return result;
 	}
 }

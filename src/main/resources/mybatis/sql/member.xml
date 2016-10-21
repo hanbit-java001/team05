@@ -4,7 +4,7 @@
 <mapper namespace="member">
 
 	<insert id="insertJoinMember" parameterType="MemberVO">
-		INSERT INTO MEMBERS VALUES(#{memberId},#{name}, #{email}, #{password})
+		INSERT INTO MEMBERS VALUES(SEQ.NEXTVAL,#{name}, #{email}, #{password})
 	</insert>
 
 </mapper>

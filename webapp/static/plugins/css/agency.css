@@ -78,9 +78,17 @@ body {
 	.navbar-header, .navbar-collapse{
 		background-color: white;
 	}
-	.carousel-indicators {
-    bottom: 205px;
-  }
+}
+
+@media (max-width: 530px) {
+	#join-form {
+		width: 100%;
+	}
+}
+@media (max-width: 316px) {
+	#login-form {
+		width: 100%;
+	}
 }
 
 @media (max-width: 378px) {

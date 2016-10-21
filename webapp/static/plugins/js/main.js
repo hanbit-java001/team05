@@ -51,7 +51,7 @@ $(document).ready(function() {
 		}
 	})
 
-		$(".btnLoginClose").on("click", function() {
+	$(".btnLoginClose").on("click", function() {
 		loginFadeOut();
 	});
 
@@ -99,6 +99,11 @@ $(document).ready(function() {
 
 	$(".sendMessage").on("click", function() {
 		applyConsult();
+	});
+
+	$('.carousel').carousel({
+		interval: 3500,
+		pause : "hover"
 	});
 
 	function inputImage(imgStartNum, imgEndNum, className, html1, html2){

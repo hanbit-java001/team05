@@ -14,7 +14,13 @@ public class MemberDAO {
 
 	public int joinMember(MemberVO memberVO) {
 
-		memberVO.setMemberId(2);
+
+		int result = sqlSession.insert("member.insertJoinMember", memberVO);
+
+		if (result != 1) {
+			throw new RuntimeException("회원가입에러");
+		}
+
 		return sqlSession.insert("member.insertJoinMember", memberVO);
 	}
 }
