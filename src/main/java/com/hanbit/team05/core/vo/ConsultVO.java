@@ -3,49 +3,46 @@ package com.hanbit.team05.core.vo;
 public class ConsultVO {
 
 	private int cosultId;
-	private String title;
+	private String name;
 	private String email;
 	private String tel;
-	private String memo;
+	private String message;
+
+	@Override
+	public String toString() {
+		return "ConsultVO [cosultId=" + cosultId + ", name=" + name + ", email=" + email + ", tel=" + tel + ", message="
+				+ message + "]";
+	}
 
 	public int getCosultId() {
 		return cosultId;
 	}
-
 	public void setCosultId(int cosultId) {
 		this.cosultId = cosultId;
 	}
-
-	public String getTitle() {
-		return title;
+	public String getName() {
+		return name;
 	}
-
-	public void setTitle(String title) {
-		this.title = title;
+	public void setName(String name) {
+		this.name = name;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 	public String getTel() {
 		return tel;
 	}
-
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-
-	public String getMemo() {
-		return memo;
+	public String getMessage() {
+		return message;
 	}
-
-	public void setMemo(String memo) {
-		this.memo = memo;
+	public void setMessage(String message) {
+		this.message = message;
 	}
 
 }

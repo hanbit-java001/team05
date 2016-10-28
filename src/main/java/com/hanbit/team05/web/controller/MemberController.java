@@ -1,5 +1,10 @@
 package com.hanbit.team05.web.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,25 +14,33 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hanbit.team05.core.service.MemberService;
+import com.hanbit.team05.core.service.SecurityService;
 import com.hanbit.team05.core.vo.MemberVO;
 
 @Controller
 public class MemberController {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(MemberController.class);
+
 	@Autowired
 	private MemberService memberService;
 
-	@RequestMapping("/api/member/login")
-	@ResponseBody
-	public boolean login(@RequestParam("mId") String email, @RequestParam("pwd") String pwd){
-
-		return false;
-	}
-
 	@RequestMapping("/api/member/join")
 	@ResponseBody
-	public int join(@RequestBody MemberVO member) {
-		int result = memberService.joinMember(member);
+	public Map doJoin(@RequestBody MemberVO member) {
+
+		memberService.joinMember(member);
+
+		Map result = new HashMap();
+		result.put("success", "회원가입에 성공하였습니다.");
+
 		return result;
+
+	}
+
+	@RequestMapping("/member/mypage")
+	public String myPage(){
+
+		return "mypage";
 	}
 }

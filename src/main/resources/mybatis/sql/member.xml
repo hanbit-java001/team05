@@ -4,7 +4,16 @@
 <mapper namespace="member">
 
 	<insert id="insertJoinMember" parameterType="MemberVO">
-		INSERT INTO MEMBERS VALUES(SEQ.NEXTVAL,#{name}, #{email}, #{password})
+		INSERT INTO MEMBERS
+		VALUES(SEQ.NEXTVAL, #{name}, #{email}, #{password})
 	</insert>
+
+	<select id="selectEmailCount" parameterType="string" resultType="int">
+		SELECT COUNT(*) FROM MEMBERS WHERE EMAIL=#{email}
+	</select>
+
+	<select id="selectMember" parameterType="string" resultType="MemberVO">
+		SELECT *FROM MEMBERS WHERE EMAIL=#{email}
+	</select>
 
 </mapper>

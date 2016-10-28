@@ -12,11 +12,9 @@
 
 <title>스카이 정형외과</title>
 
-<!-- Bootstrap Core CSS -->
 <link href="/static/plugins/bootstrap/css/bootstrap.min.css"
 	rel="stylesheet">
 
-<!-- Custom Fonts -->
 <link href="/static/plugins/font-awesome/css/font-awesome.css"
 	rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
@@ -30,9 +28,8 @@
 	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
 	rel='stylesheet' type='text/css'>
 
-<!-- Theme CSS -->
+<link href="static/plugins/css/main.css" rel="stylesheet">
 <link href="static/plugins/css/agency.css" rel="stylesheet">
-
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,8 +64,10 @@
 					<li><a class="page-scroll" href="#portfolio">시설둘러보기</a></li>
 					<li><a class="page-scroll" href="#contact">상담접수</a></li>
 					<li><a class="page-scroll" href="#mapWrapper">찾아오시는길</a></li>
-					<li><a class="page-member" href="#login">로그인</a></li>
-					<li><a class="page-member" href="#join">회원가입</a></li>
+					<li><a class="page-member before-member" href="#login">로그인</a></li>
+					<li><a class="page-member before-member" href="#join">회원가입</a></li>
+					<li><a class="page-member after-member" href="#mypage">마이페이지</a></li>
+					<li><a class="page-member after-member" href="#logout">로그아웃</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -238,7 +237,8 @@
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<h4 class="section-subheading">상담접수</h4>
-					<h5 class="section-subheading">원하시는 내용을 써서 보내주세요. 답변해드리겠습니다.</h5>
+					<h5 class="section-subheading">원하시는 내용을 써서 보내주세요. 답변해드리겠습니다. <br><br>
+					회원일시 이메일과, 홈페이지에서 답변확인이 가능합니다. <br> 비회원일시에는 이메일로만 확인이가능합니다.</h5>
 				</div>
 			</div>
 			<div class="row">
@@ -247,25 +247,24 @@
 						<div class="col-md-6">
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="이름"
-									id="sendName">
-								<p class="help-block text-danger"></p>
+									id="uName">
+								<p class="help-name text-danger"></p>
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control"
-									placeholder="이메일 주소 (답변을 위해 이메일은 반드시 제대로 적어주셔야합니다.)" id="sendEmail">
-								<p class="help-block text-danger"></p>
+									placeholder="답변을 위해 이메일은 제대로 적어주시길 바랍니다." id="uEmail">
+								<p class="help-email text-danger"></p>
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="휴대폰 번호"
-									id="sendPhone">
-
-								<p class="help-block text-danger"></p>
+									id="uTel">
+								<p class="help-tel text-danger"></p>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
-								<textarea class="form-control" placeholder="상담 내용" id="message"></textarea>
-								<p class="help-block text-danger"></p>
+								<textarea class="form-control" placeholder="상담 내용" id="uMessage"></textarea>
+								<p class="help-message text-danger"></p>
 							</div>
 						</div>
 						<div class="clearfix"></div>
@@ -291,17 +290,20 @@
 			<i class="btnLoginClose fa fa-times fa-2" aria-hidden="true"></i>
 		</div>
 		<div class="form-group">
-			<label for="usr">이메일 : </label> <input type="text"
-				class="form-control" id="usr" placeholder="이메일">
+			<label for="user-email">이메일 : </label> <input type="text"
+				class="form-control" id="user-email" placeholder="이메일">
 
 		</div>
 		<div class="form-group">
-			<label for="pw">비밀번호 :</label> <input type="password"
-				class="form-control" id="pwd" placeholder="비밀번호">
+			<label for="user-pw">비밀번호 :</label> <input type="password"
+				class="form-control" id="user-pw" placeholder="비밀번호">
 		</div>
 		<div class="bottom-button">
 			<button class="btnLogin btn btn-success">확인</button>
 			<button class="btnLoginClose btn btn-default">취소</button>
+		</div>
+		<div class="find-pwd">
+			<button class="findPassword btn btn-link">비밀번호를 잃어버리셨나요?</button>
 		</div>
 	</section>
 
@@ -315,11 +317,11 @@
 		</div>
 		<div class="form-group">
 			<label for="email">이메일 : </label>
-			<input type="text" class="form-control" id="email" placeholder="이메일">
+			<input type="text" class="form-control" id="email" placeholder="현재 쓰시는 이메일을 적어주시길 바랍니다.">
 		</div>
 		<div class="form-group">
-			<label for="joinpw">비밀번호 :</label>
-			<input type="password" class="form-control" id="joinpw" placeholder="비밀번호">
+			<label for="pwd">비밀번호 :</label>
+			<input type="password" class="form-control" id="pwd" placeholder="비밀번호">
 		</div>
 		<div class="form-group">
 			<label for="currentpwd">비밀번호확인 :</label>
