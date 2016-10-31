@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.hanbit.team05.core.service.MemberService;
 import com.hanbit.team05.core.service.SecurityService;
+import com.hanbit.team05.core.session.LoginRequired;
 import com.hanbit.team05.core.vo.MemberVO;
 
 @Controller
@@ -38,6 +39,7 @@ public class MemberController {
 
 	}
 
+	@LoginRequired
 	@RequestMapping("/member/mypage")
 	public String myPage(){
 

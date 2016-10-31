@@ -20,13 +20,12 @@ public class SessionAspect {
 			return pjp.proceed();
 		}
 
-		MethodSignature methodSignature = (MethodSignature) pjp.proceed();
+		MethodSignature methodSignature = (MethodSignature) pjp.getSignature();
 		Class returnType = methodSignature.getReturnType();
 
 		if (returnType == String.class) {
-			return "login";
-
+			throw new RuntimeException("로그인이 필요합니다.");
 		}
-		throw new RuntimeException("로그인이 필요합니다.");
+		return null;
 	}
 }

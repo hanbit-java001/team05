@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
+
 <title>마이페이지</title>
 
 <link href="/static/plugins/bootstrap/css/bootstrap.min.css"
@@ -28,8 +29,7 @@
 
 <link href="/static/plugins/css/main.css" rel="stylesheet">
 <link href="/static/plugins/css/agency.css" rel="stylesheet">
-
-
+<link href="/static/plugins/css/mypage.css" rel="stylesheet">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!-- [if lt IE 9] -->
@@ -39,41 +39,46 @@
 <!--     [endif] -->
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
-		<div class="container-fluid">
-			<div class="navbar-header topMenu-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">스카이정형외과</a>
-			</div>
-			<div class="collapse navbar-collapse topMenu-collapse text-center"
-				id="myNavbar">
-				<ul class="nav navbar-nav test">
-					<li><a href="#">회원정보</a></li>
-					<li><a href="#">보안설정</a></li>
-					<li><a href="#">상담내역</a></li>
-				</ul>
-				<ul class="navbar-right">
-				<li><p style="color: white; transform: translateY(50%);">민창훈님 반갑습니다.</p></li>
-			</ul>
-			</div>
-		</div>
-	</nav>
-
+	<nav class="navbar navbar-default" role="navigation">
 	<div class="container">
-		<h3>Collapsible Navbar</h3>
-		<p>In this example, the navigation bar is hidden on small screens
-			and replaced by a button in the top right corner (try to re-size this
-			window).
-		<p>Only when the button is clicked, the navigation bar will be
-			displayed.</p>
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse"
+				data-target="#navbar-brand-centered">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<div class="navbar-brand navbar-brand-centered logo-text">스카이정형외과</div>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="navbar-brand-centered">
+			<ul class="nav navbar-nav">
+				<li><a class="mydata-open" href="#">내정보</a></li>
+				<li><a class="security-setting" href="#">보안설정</a></li>
+				<li><a class="cosult-data-open" href="#">상담내역</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li class="top-greeting"><p class="top-greeting-text"></p></li>
+			</ul>
+		</div>
 	</div>
-	<script src="/static/plugins/jquery/jquery-3.1.0.min.js"></script>
-
-	<script src="/static/plugins/vendor/bootstrap/js/bootstrap.min.js"></script>
-
+	</nav>
+	<div class="border-table">
+		<p class="mydata"></p>
+	</div>
+	<br>
+	<div class="border-table consult-data">
+	</div>
 </body>
+<script src="/static/plugins/jquery/jquery-3.1.0.min.js"></script>
+
+<script src="/static/plugins/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="/static/plugins/js/jqBootstrapValidation.js"></script>
+<script src="/static/plugins/js/contact_me.js"></script>
+<script src="/static/plugins/js/agency.js"></script>
+<script src="/static/plugins/js/mypage.js"></script>
 </html>

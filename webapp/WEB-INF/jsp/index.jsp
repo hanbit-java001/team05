@@ -28,8 +28,8 @@
 	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
 	rel='stylesheet' type='text/css'>
 
-<link href="static/plugins/css/main.css" rel="stylesheet">
-<link href="static/plugins/css/agency.css" rel="stylesheet">
+<link href="/static/plugins/css/main.css" rel="stylesheet">
+<link href="/static/plugins/css/agency.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,8 +50,7 @@
 					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand page-scroll" href="#page-top"><img
-					src="static/plugins/img/logo2.png" id="logoImg" alt=""></a>
+				<a class="navbar-brand page-scroll" href="#page-top"></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -150,7 +149,7 @@
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>
 							</div>
-						</div> <img src="static/plugins/img/portfolio/입원실1.jpg"
+						</div> <img src="/static/plugins/img/portfolio/입원실1.jpg"
 						class="img-responsive" alt="">
 					</a>
 					<div class="portfolio-caption">
@@ -164,7 +163,7 @@
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>
 							</div>
-						</div> <img src="static/plugins/img/portfolio/입원실2.jpg"
+						</div> <img src="/static/plugins/img/portfolio/입원실2.jpg"
 						class="img-responsive" alt="">
 					</a>
 					<div class="portfolio-caption">
@@ -178,7 +177,7 @@
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>
 							</div>
-						</div> <img src="static/plugins/img/portfolio/입원실3.jpg"
+						</div> <img src="/static/plugins/img/portfolio/입원실3.jpg"
 						class="img-responsive" alt="">
 					</a>
 					<div class="portfolio-caption">
@@ -192,7 +191,7 @@
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>
 							</div>
-						</div> <img src="static/plugins/img/portfolio/수술실1.jpg"
+						</div> <img src="/static/plugins/img/portfolio/수술실1.jpg"
 						class="img-responsive" alt="">
 					</a>
 					<div class="portfolio-caption">
@@ -206,7 +205,7 @@
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>
 							</div>
-						</div> <img src="static/plugins/img/portfolio/방사선실 (1).JPG"
+						</div> <img src="/static/plugins/img/portfolio/방사선실 (1).JPG"
 						class="img-responsive" alt="">
 					</a>
 					<div class="portfolio-caption">
@@ -220,7 +219,7 @@
 							<div class="portfolio-hover-content">
 								<i class="fa fa-plus fa-3x"></i>
 							</div>
-						</div> <img src="static/plugins/img/portfolio/방사선실 (1).JPG"
+						</div> <img src="/static/plugins/img/portfolio/방사선실 (1).JPG"
 						class="img-responsive" alt="">
 					</a>
 					<div class="portfolio-caption">
@@ -371,7 +370,7 @@
 								<h2>입원실 내부모습입니다.</h2>
 								<p class="item-intro text-muted">--------TEST---------</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/입원실1.jpg" alt="">
+									src="/static/plugins/img/portfolio/입원실1.jpg" alt="">
 								<p>안녕하세요. 스카이정형외과 입원실 내부모습입니다.</p>
 
 								<button type="button" class="btn btn-primary"
@@ -402,7 +401,7 @@
 								<h2>입원실 두번쨰모습입니다.</h2>
 								<p class="item-intro text-muted">-----TEST-----</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/입원실2.jpg" alt="">
+									src="/static/plugins/img/portfolio/입원실2.jpg" alt="">
 								<p>안녕하세요. 스카이정형외과 입원실 내부모습입니다.</p>
 								<p>
 									<button type="button" class="btn btn-primary"
@@ -433,7 +432,7 @@
 								<h2>입원실 세번쨰모습입니다.</h2>
 								<p class="item-intro text-muted">------TEST-------</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/입원실3.jpg" alt="">
+									src="/static/plugins/img/portfolio/입원실3.jpg" alt="">
 								<p>안녕하세요. 스카이정형외과 입원실 내부모습입니다.</p>
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
@@ -464,7 +463,7 @@
 								<h2>스카이정형외과 수술실 내부입니다.</h2>
 								<p class="item-intro text-muted">----TEST----</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/수술실1.jpg" alt="">
+									src="/static/plugins/img/portfolio/수술실1.jpg" alt="">
 								<p>안녕하세요. 스카이정형외과 수술실입니다.</p>
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
@@ -495,7 +494,7 @@
 								<h2>스카이정형외과 방사선실 내부입니다.</h2>
 								<p class="item-intro text-muted">---TEST----</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/방사선실 (1).JPG" alt="">
+									src="/static/plugins/img/portfolio/방사선실 (1).JPG" alt="">
 								<p>안녕하세요. 스카이정형외과 방사선실입니다.</p>
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
@@ -526,7 +525,7 @@
 								<h2>사진</h2>
 								<p class="item-intro text-muted">TEST</p>
 								<img class="img-responsive img-centered"
-									src="static/plugins/img/portfolio/방사선실 (1).JPG" alt="">
+									src="/static/plugins/img/portfolio/방사선실 (1).JPG" alt="">
 								<button type="button" class="btn btn-primary"
 									data-dismiss="modal">
 									닫기<i class="fa fa-times"></i>
@@ -539,18 +538,18 @@
 		</div>
 	</div>
 
-	<script src="static/plugins/jquery/jquery-3.1.0.min.js"></script>
+	<script src="/static/plugins/jquery/jquery-3.1.0.min.js"></script>
 
-	<script src="static/plugins/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/static/plugins/vendor/bootstrap/js/bootstrap.min.js"></script>
 
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-	<script src="static/plugins/js/jqBootstrapValidation.js"></script>
-	<script src="static/plugins/js/contact_me.js"></script>
-	<script src="static/plugins/js/agency.js"></script>
+	<script src="/static/plugins/js/jqBootstrapValidation.js"></script>
+	<script src="/static/plugins/js/contact_me.js"></script>
+	<script src="/static/plugins/js/agency.js"></script>
 
-	<script src="static/plugins/js/main.js"></script>
+	<script src="/static/plugins/js/main.js"></script>
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl4ru4utIETl0wXbGlo2pzeUJ-xJfYnKo"></script>
 

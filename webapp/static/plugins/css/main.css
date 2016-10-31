@@ -1,3 +1,4 @@
+
 .find-pwd>.btn, .find-pwd{
 	font-size: 12px;
 	text-align: center;
@@ -64,11 +65,6 @@
 	font-weight: bold;
 }
 
-.text-center {
-	position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
 
 @media ( max-width : 767px) {
 	.navbar-header, .navbar-collapse {
@@ -116,4 +112,3 @@
 .nav>li>a.after-member {
 	display: none;
 }
-

@@ -38,7 +38,6 @@ public class ExceptionAspect {
 			response.getOutputStream().write(json.getBytes());
 			response.flushBuffer();
 		}
-
 		return null;
 	}
 }

@@ -24,7 +24,7 @@ $(document).ready(function() {
 	}
 
 	callAjax({
-		url : "api/security/isLoggedIn",
+		url : "/api/security/isLoggedIn",
 		method : "GET",
 		success : function(result) {
 			showMenu(false);
@@ -95,7 +95,7 @@ $(document).ready(function() {
 		} else if (pageText == "#logout") {
 			location.href="/api/security/logout";
 		} else if (pageText == "#mypage") {
-
+			location.href="/member/mypage";
 		}
 	})
 

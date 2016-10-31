@@ -1,0 +1,62 @@
+@media screen and (min-width:768px) {
+	.navbar-brand-centered {
+		position: absolute;
+		left: 50%;
+		display: block;
+		width: 160px;
+		text-align: center;
+		background-color: #eee;
+	}
+	.navbar>.container .navbar-brand-centered, .navbar>.container-fluid .navbar-brand-centered
+		{
+		margin-left: -80px;
+	}
+}
+
+.navbar-default .navbar-brand {
+	font-family: '나눔바른펜';
+	font-weight: bold;
+	color: #0000ff;
+}
+
+.navbar-brand {
+	background-color: #ffffff;
+}
+
+.navbar-default .navbar-brand:HOVER {
+	background-color: #f3f3f3;
+	cursor: pointer;
+	color: #6262ff;
+}
+
+.top-greeting {
+	transform: translateY(50%);
+}
+
+.top-greeting-text {
+	font-size: 12px;
+	font-family: '굴림체';
+	font-weight: bold;
+}
+
+.border-table {
+	border: solid 1px;
+	text-align: center;
+	width: 500px;
+	height: 200px;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@media ( max-width :553px ) {
+	.border-table {
+		width: 100%;
+	}
+}
+
+.mydata {
+	transform: translateY(100%)
+}
+
