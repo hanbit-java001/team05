@@ -118,19 +118,19 @@ $(document).ready(function() {
 
 	$(".sendMessage").on("click", function() {
 
-		$.ajax({
+		callAjax({
 			url : "/api/send/email",
 			method : "POST",
 			data : {
 				toAddress : $(".toAddress").text(),
 				text : $("#message").val(),
 				consultId : consultId
+			},
+			success : function(result) {
+				alert(result.success);
+				location.reload();
 			}
-		}).done(function(result) {
-			alert(result.success);
-			location.reload();
 		})
-
 	})
 	function drawPaging(totalCount) {
 
