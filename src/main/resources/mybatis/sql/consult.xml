@@ -6,7 +6,42 @@
 
 	<insert id="insertConsult" parameterType="ConsultVO">
 		INSERT INTO CONSULT
-		VALUES(SEQ.NEXTVAL, #{name}, #{email}, #{tel}, #{message})
+		VALUES(SEQ_CONSULT.NEXTVAL, #{name}, #{email}, #{tel}, #{message}, 'false', '')
 	</insert>
+
+	<select id="selectConsultCount" parameterType="string" resultType="int">
+		SELECT COUNT(*) FROM CONSULT WHERE EMAIL=#{email}
+	</select>
+
+	<select id="selectConsultList" parameterType="map" resultType="ConsultVO">
+		<![CDATA[
+		SELECT *
+ 			 FROM (SELECT T0.*, FLOOR((ROWNUM - 1) / 3 + 1) PAGE
+          		FROM (
+               		SELECT CONSULT_ID
+                      ,EMAIL
+                      ,MESSAGE
+                      ,NAME
+                      ,REPLY
+					  ,TEL
+					  ,REPLY_CONTENT
+                      ,COUNT(*) OVER() AS TOT_CNT
+                  FROM CONSULT ORDER BY ROWNUM DESC
+                ) T0
+        	)
+ 		WHERE PAGE = #{pageNum} AND EMAIL = #{email}
+	]]>
+	</select>
+
+	<select id="selectReplyCount" parameterType="string" resultType="int">
+		SELECT COUNT(*) FROM CONSULT
+		 WHERE EMAIL = #{email} AND REPLY = 'true'
+	</select>
+
+	<update id="modifyConsult" parameterType="map">
+		UPDATE CONSULT
+		   SET REPLY = 'true', REPLY_CONTENT = #{content}
+		 WHERE CONSULT_ID = #{consultId}
+	</update>
 
 </mapper>

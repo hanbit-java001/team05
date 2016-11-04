@@ -1,3 +1,11 @@
+body {
+	background-color: #e1e1e1;
+}
+
+footer {
+	background-color: #e1e1e1;
+}
+
 @media screen and (min-width:768px) {
 	.navbar-brand-centered {
 		position: absolute;
@@ -7,18 +15,27 @@
 		text-align: center;
 		background-color: #eee;
 	}
-	.navbar>.container .navbar-brand-centered, .navbar>.container-fluid .navbar-brand-centered
-		{
+	.navbar>.container .navbar-brand-centered, .navbar>.container-fluid .navbar-brand-centered, .top-greeting
+	{
 		margin-left: -80px;
 	}
+
 }
 
+@media (max-width : 767px) {
+	.navbar-right .top-greeting {
+		margin-left: 15px;
+	}
+}
 .navbar-default .navbar-brand {
 	font-family: '나눔바른펜';
 	font-weight: bold;
-	color: #0000ff;
+	background-color: #f8f8f8;
 }
 
+.logo {
+ 	text-align: center;
+}
 .navbar-brand {
 	background-color: #ffffff;
 }
@@ -39,24 +56,103 @@
 	font-weight: bold;
 }
 
-.border-table {
+.mydata-border-table {
 	border: solid 1px;
+	border-color: black;
+	background-color: #ffffff;
 	text-align: center;
 	width: 500px;
 	height: 200px;
 	margin-top: 100px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.consult-border-table {
+	border: solid 1px;
+	border-color: black;
+	background-color: #ffffff;
+	text-align: center;
+	width: 500px;
+	height: 150px;
+	margin-top: 50px;
 	margin-left: auto;
+	margin-right: auto;
 }
 
 @media ( max-width :553px ) {
-	.border-table {
+
+	.mydata-border-table, .consult-border-table{
+		width: 100%;
+	}
+
+}
+
+@media ( max-width :311px ) {
+
+	.consult-border-table{
+		height: 200px;
+	}
+
+}
+
+.get-Text {
+	transform: translateY(50%);
+}
+
+.consult-table {
+	display: none;
+	margin-top: 50px;
+	/* transform: translateX(40%); */
+	width: 900px;
+}
+
+.table {
+	background-color: white;
+	border: solid 1px;
+	border-color: #4e9dfe;
+}
+.consult-container {
+	text-align: center;
+}
+
+.consult-table>table>thead th {
+	text-align: center;
+}
+
+.consult-table>table>tbody td:nth-child(2) {
+	text-align: left;
+	width: 300px;
+}
+
+@media (max-width : 916px) {
+	.consult-table {
 		width: 100%;
 	}
 }
 
-.mydata {
-	transform: translateY(100%)
+.reply-consult {
+	display : none;
+	border: solid 1px;
+	border-color: black;
+	border-radius: 5px;
+	background-color: #ffffff;
+	text-align: center;
+	width: 800px;
+	height: 650px;
+	margin-top: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-left: auto;
 }
+
+.consult-hover:HOVER{
+	border-bottom: solid 1px black;
+	cursor: pointer;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+	background-color: white;
+}
+
 

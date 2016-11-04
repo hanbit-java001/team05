@@ -24,8 +24,8 @@ public class SessionAspect {
 		Class returnType = methodSignature.getReturnType();
 
 		if (returnType == String.class) {
-			throw new RuntimeException("로그인이 필요합니다.");
+			return "index";
 		}
-		return null;
+		throw new RuntimeException("로그인이 필요합니다.");
 	}
 }

@@ -46,7 +46,7 @@ public class SecurityController {
 		return result;
 	}
 
-	@RequestMapping(value="api/security/isLoggedIn",method=RequestMethod.GET)
+	@RequestMapping(value="/api/security/isLoggedIn",method=RequestMethod.GET)
 	@ResponseBody
 	public Map isLoggedIn(){
 
@@ -64,7 +64,7 @@ public class SecurityController {
 		return result;
 	}
 
-	@RequestMapping("api/security/logout")
+	@RequestMapping("/api/security/logout")
 	@ResponseBody
 	public void logout(HttpServletResponse response) throws IOException {
 

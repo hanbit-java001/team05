@@ -1,17 +1,5 @@
 $(document).ready(function() {
 
-	function callAjax(ajaxObj) {
-		$.ajax(ajaxObj).fail(function(jqXHR, textStatus, errorThrown) {
-			var errorMsg = "잠시 후 사용해 주세요.";
-
-			if (jqXHR.status == 1500) {
-				var error = JSON.parse(jqXHR.responseText);
-				errorMsg = error.errorMsg;
-			}
-			alert(errorMsg);
-		});
-	}
-
 	function showMenu(isLoginIn) {
 
 		$(".after-member").hide();
@@ -34,6 +22,11 @@ $(document).ready(function() {
 				loginMode(result.name, result.email);
 			}
 		}
+	})
+
+	$(".findPassword").on("click", function() {
+		loginFadeOut();
+		findFadeIn();
 	})
 
 	function loginMode(name, email){
@@ -81,6 +74,14 @@ $(document).ready(function() {
 		$("#join-form").fadeOut();
 	}
 
+	function findFadeIn() {
+		$("#find-form").fadeIn();
+	}
+
+	function findFadeOut() {
+		$("#find-form").fadeOut();
+	}
+
 	$(".page-member").bind('click', function() {
 		var pageText = $(this).attr("href");
 
@@ -110,6 +111,13 @@ $(document).ready(function() {
 		$("#currentpwd").val("");
 	});
 
+	$("#login-form input").on("keyup", function(event) {
+		if (event.keyCode != 13) {
+			return;
+		}
+		$(".btnLogin").click();
+	})
+
 
 	$(".btnLogin").on("click", function() {
 
@@ -136,7 +144,7 @@ $(document).ready(function() {
 			},
 			success : function(result) {
 				alert(result.mName + "님 반갑습니다.");
-				location.reload();
+				location.href="/";
 			}
 		})
 	});
@@ -201,6 +209,28 @@ $(document).ready(function() {
 
 	});
 
+	$(".btnfind").on("click", function() {
+		callAjax({
+			url : "/api/send/findPw",
+			method : "POST",
+			data : 	{
+				toAddress : $("#find-email").val(),
+				name : $("#find-name").val(),
+			},
+			success : function(result) {
+				alert(result.success);
+			}
+		});
+	})
+
+	$(".btnfindClose").on("click", function() {
+		findFadeOut();
+	})
+
+	function helpText(orgInput, content) {
+		orgInput.parent(".form-group").find(".help-text").html(content);
+	}
+
 	$(".sendMessage").on("click", function() {
 
 		var uName = $("#uName").val().trim();
@@ -208,15 +238,38 @@ $(document).ready(function() {
 		var uTel = $("#uTel").val().trim();
 		var uMessage = $("#uMessage").val();
 
-		if(uName == "" || !isName.test(uName)) {
-			alert("이름이 제대로 입력되지않았습니다.");
-			$("#name").focus();
-			$(".help-name").html("테스트");
-			return;
-		} else if (uEmail == "" || !isEmail.test(uEmail)) {
-			alert("이메일이 제대로 입력되지않았습니다.");
-			$("#email").focus();
-			$(".help-email").html("zz");
+		var isValidate = true;
+
+		if(!isName.test(uName)) {
+			var errorMsg = "이름이 제대로 입력되지않았습니다.";
+			//alert(errorMsg);
+			$("#uName").focus();
+			helpText($("#uName"), errorMsg);
+			isValidate = false;
+		}
+		if (!isEmail.test(uEmail)) {
+			var errorMsg = "이메일이 제대로 입력되지않았습니다.";
+			//alert(errorMsg);
+			$("#uEmail").focus();
+			helpText($("#uEmail"), errorMsg);
+			isValidate = false;
+		}
+		if (!isTel.test(uTel)) {
+			var errorMsg = "전화번호가 제대로 입력되지않았습니다.";
+			//alert(errorMsg);
+			$("#uTel").focus();
+			helpText($("#uTel"), errorMsg);
+			isValidate = false;
+		}
+		if (uMessage.length < 10) {
+			var errorMsg = "상담내용이 제대로 입력되지않았습니다.";
+			//alert(errorMsg);
+			$("#uMessage").focus();
+			helpText($("#uMessage"), errorMsg);
+			isValidate = false;
+		}
+
+		if (!isValidate) {
 			return;
 		}
 

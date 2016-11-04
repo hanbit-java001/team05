@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="admin">
+
+	<select id="selectConsultList" parameterType="map" resultType="ConsultVO">
+		<![CDATA[
+ 				SELECT *
+ 			 FROM (SELECT T0.*, FLOOR((ROWNUM - 1) / 10 + 1) PAGE
+          		FROM (
+               		SELECT CONSULT_ID
+                      ,EMAIL
+                      ,MESSAGE
+                      ,NAME
+                      ,REPLY
+					  ,TEL
+					  ,REPLY_CONTENT
+                      ,COUNT(*) OVER() AS TOT_CNT
+                  FROM CONSULT WHERE REPLY = #{flag} ORDER BY ROWNUM DESC
+                ) T0
+        	)
+ 		WHERE PAGE = #{pageNum}
+	]]>
+	</select>
+
+	<select id="selectConsultCount" parameterType="string" resultType="int">
+		SELECT COUNT(*) FROM CONSULT WHERE REPLY = #{flag}
+	</select>
+
+</mapper>

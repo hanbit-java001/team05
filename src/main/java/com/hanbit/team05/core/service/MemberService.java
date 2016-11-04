@@ -5,6 +5,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.hanbit.team05.core.dao.MemberDAO;
+import com.hanbit.team05.core.session.Session;
+import com.hanbit.team05.core.session.SessionHelper;
 import com.hanbit.team05.core.vo.MemberVO;
 
 @Service
@@ -35,6 +37,13 @@ public class MemberService {
 		}
 
 		return result;
+	}
+
+	public MemberVO getMember() {
+		Session session = SessionHelper.getSession();
+		String email = session.getEmail();
+
+		return memberDAO.selectMember(email);
 	}
 
 }

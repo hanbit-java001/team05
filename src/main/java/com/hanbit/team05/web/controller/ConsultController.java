@@ -1,6 +1,7 @@
 package com.hanbit.team05.web.controller;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -27,12 +28,26 @@ public class ConsultController {
 	@ResponseBody
 	public Map insertConsult(@RequestBody ConsultVO consult) {
 
-		LOGGER.debug(consult.toString());
-
 		consultService.addConsult(consult);
 
 		Map result = new HashMap<>();
 		result.put("success", "상담접수에 완료하였습니다.");
+
+		return result;
+	}
+
+	@RequestMapping("/api/consult/count")
+	@ResponseBody
+	public Map selectCount() {
+
+		return consultService.getCount();
+	}
+
+	@RequestMapping("/api/consult/data")
+	@ResponseBody
+	public List<ConsultVO> getConsult(@RequestParam("pageNum") int pageNum) {
+
+		List<ConsultVO> result = consultService.getConsult(pageNum);
 
 		return result;
 	}

@@ -16,4 +16,8 @@
 		SELECT *FROM MEMBERS WHERE EMAIL=#{email}
 	</select>
 
+	<update id="modifyMember" parameterType="map">
+		UPDATE MEMBERS SET PASSWORD=#{password} WHERE EMAIL=#{email}
+	</update>
+
 </mapper>

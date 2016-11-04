@@ -1,0 +1,21 @@
+/* .consult-container { */
+/* 	text-align: center; */
+/* } */
+
+/* .consult-table>table>thead th { */
+/* 	text-align: center; */
+/* } */
+
+/* .consult-table>table>tbody td:nth-child(2) { */
+/* 	text-align: left; */
+/* } */
+
+.consult-table{
+	display: inline-block;
+}
+
+.reply-text {
+	font-size: 16px;
+	font-weight: bold;
+	font-family: '나눔고딕';
+}

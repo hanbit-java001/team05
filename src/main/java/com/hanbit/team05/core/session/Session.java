@@ -12,6 +12,11 @@ public class Session {
 	private String email;
 	private String name;
 
+	@Override
+	public String toString() {
+		return "Session [loggedIn=" + loggedIn + ", memberId=" + memberId + ", email=" + email + ", name=" + name + "]";
+	}
+
 	public void logout(){
 		loggedIn = false;
 		memberId = 0;

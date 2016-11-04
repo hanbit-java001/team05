@@ -2,14 +2,13 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-<head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>마이페이지</title>
+<title>관리자</title>
 
 <link href="/static/plugins/bootstrap/css/bootstrap.min.css"
 	rel="stylesheet">
@@ -30,6 +29,7 @@
 <link href="/static/plugins/css/main.css" rel="stylesheet">
 <link href="/static/plugins/css/agency.css" rel="stylesheet">
 <link href="/static/plugins/css/mypage.css" rel="stylesheet">
+<link href="/static/plugins/css/admin.css" rel="stylesheet">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!-- [if lt IE 9] -->
@@ -55,26 +55,19 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="navbar-brand-centered">
 				<ul class="nav navbar-nav">
-					<li><a class="mydata-open" href="#">내정보</a></li>
-					<li><a class="security-setting" href="#">보안설정</a></li>
-					<li><a class="cosult-data-open" href="#">상담내역</a></li>
+					<li><a class="consult-true" href="#">답변완료내역</a></li>
+					<li><a class="consult-false" href="#">답변미완료내역</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li class="top-greeting"><p class="top-greeting-text"></p></li>
-					<li><a class="member-logout" href="#">로그아웃</a></li>
+					<li class="top-greeting"><p class="top-greeting-text">관리자님
+							안녕하세요.</p></li>
+					<li><a class="admin-logout" href="#">로그아웃</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<div class="mydata-border-table">
-		<p class="mydata get-Text"></p>
-	</div>
-	<br>
-	<div class="consult-border-table">
-		<p class="consult-data get-Text"></p>
-	</div>
-
+	<div class="reply-text text-center"></div>
 	<div class="consult-container">
 		<div class="consult-table">
 			<table class="table">
@@ -82,29 +75,43 @@
 					<tr>
 						<th>작성일</th>
 						<th>제목</th>
-						<th>답변상태</th>
+						<th>이름</th>
+						<th>휴대폰번호</th>
 					</tr>
 				</thead>
 				<tbody class="consult-list">
 				</tbody>
 				<tr class="text-center">
-					<td class="paging-num" colspan="3"></td>
+					<td class="paging-num" colspan="4"></td>
 				</tr>
 			</table>
 		</div>
 
 		<div class="reply-consult">
+			<div class="form-group">
+				<div class="form-group">
+					<label for="toAddress">받는사람 이메일: </label>
+					<p class="toAddress"></p>
+				</div>
+				<div class="form-group">
+					<label for="name" class="name">이름:</label> <br> <label
+						for="tel" class="tel">휴대폰번호: </label>
+				</div>
 				<div>
 					<label for="user-message">글내용 : </label>
 					<textarea class="form-control" id="user-message" rows="10"></textarea>
 				</div>
-				<br>
 				<div>
-					<label for="message" class="message-label">답변 내용 : </label>
-					<textarea class="form-control" id="message" rows="10"></textarea>
+					<label for="message" class="message-label">답변 하실 내용 : </label>
+					<textarea class="form-control" placeholder="답변 하실 내용 입력"
+						id="message" rows="10"></textarea>
+				</div>
+				<div>
+					<button class="sendMessage btn btn-success">보내기</button>
 				</div>
 			</div>
 		</div>
+	</div>
 
 	<footer>
 		<div class="container">
@@ -126,7 +133,6 @@
 	</footer>
 </body>
 <script src="/static/plugins/jquery/jquery-3.1.0.min.js"></script>
-
 <script src="/static/plugins/vendor/bootstrap/js/bootstrap.min.js"></script>
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
@@ -134,5 +140,5 @@
 <script src="/static/plugins/js/contact_me.js"></script>
 <script src="/static/plugins/js/agency.js"></script>
 <script src="/static/plugins/js/common.js"></script>
-<script src="/static/plugins/js/mypage.js"></script>
+<script src="/static/plugins/js/admin.js"></script>
 </html>

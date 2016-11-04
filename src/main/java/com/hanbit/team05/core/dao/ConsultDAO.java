@@ -1,5 +1,8 @@
 package com.hanbit.team05.core.dao;
 
+import java.util.List;
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,4 +22,21 @@ public class ConsultDAO {
 	public int addConsult(ConsultVO consult) {
 		return sqlSession.insert("consult.insertConsult", consult);
 	}
+
+	public List<ConsultVO> getConsult(Map data) {
+		return sqlSession.selectList("consult.selectConsultList", data);
+	}
+
+	public int countConsult(String email) {
+		return sqlSession.selectOne("consult.selectConsultCount", email);
+	}
+
+	public int replyConsult(String email) {
+		return sqlSession.selectOne("consult.selectReplyCount", email);
+	}
+
+	public int modifyConsult(Map data) {
+		return sqlSession.update("consult.modifyConsult", data);
+	}
+
 }

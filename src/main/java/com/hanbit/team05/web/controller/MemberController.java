@@ -36,7 +36,6 @@ public class MemberController {
 		result.put("success", "회원가입에 성공하였습니다.");
 
 		return result;
-
 	}
 
 	@LoginRequired
@@ -45,4 +44,13 @@ public class MemberController {
 
 		return "mypage";
 	}
+
+	@RequestMapping("/api/mypage/data")
+	@ResponseBody
+	public MemberVO getMember(){
+
+		MemberVO result = memberService.getMember();
+		return result;
+	}
+
 }

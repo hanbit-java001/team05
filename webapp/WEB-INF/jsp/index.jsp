@@ -50,7 +50,8 @@
 					<span class="sr-only">Toggle navigation</span> Menu <i
 						class="fa fa-bars"></i>
 				</button>
-				<a class="navbar-brand page-scroll" href="#page-top"></a>
+				<a class="navbar-brand page-scroll" href="#page-top"><img
+					src="/static/plugins/img/logo2.png" id="logoImg" alt=""></a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,7 +61,7 @@
 					<li class="hidden"><a href="#page-top"></a></li>
 					<li><a class="page-scroll" href="#about">병원소개</a></li>
 					<li><a class="page-scroll" href="#cta">진료안내</a></li>
-					<li><a class="page-scroll" href="#portfolio">시설둘러보기</a></li>
+					<li><a class="page-scroll" href="#portfolio">시설안내</a></li>
 					<li><a class="page-scroll" href="#contact">상담접수</a></li>
 					<li><a class="page-scroll" href="#mapWrapper">찾아오시는길</a></li>
 					<li><a class="page-member before-member" href="#login">로그인</a></li>
@@ -88,14 +89,14 @@
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
-						<h2 class="section-heading">병원소개</h2>
-<!-- 						Indicators -->
-<!-- 						<ol class="carousel-indicators"> -->
-<!-- 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li> -->
-<!-- 							<li data-target="#myCarousel" data-slide-to="1"></li> -->
-<!-- 							<li data-target="#myCarousel" data-slide-to="2"></li> -->
-<!-- 							<li data-target="#myCarousel" data-slide-to="3"></li> -->
-<!-- 						</ol> -->
+<!-- 						<h2 class="section-heading">병원소개</h2> -->
+						<!-- 						Indicators -->
+						<!-- 						<ol class="carousel-indicators"> -->
+						<!-- 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li> -->
+						<!-- 							<li data-target="#myCarousel" data-slide-to="1"></li> -->
+						<!-- 							<li data-target="#myCarousel" data-slide-to="2"></li> -->
+						<!-- 							<li data-target="#myCarousel" data-slide-to="3"></li> -->
+						<!-- 						</ol> -->
 
 						<!-- Wrapper for slides -->
 						<div class="carousel-inner" role="listbox">
@@ -236,8 +237,11 @@
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<h4 class="section-subheading">상담접수</h4>
-					<h5 class="section-subheading">원하시는 내용을 써서 보내주세요. 답변해드리겠습니다. <br><br>
-					회원일시 이메일과, 홈페이지에서 답변확인이 가능합니다. <br> 비회원일시에는 이메일로만 확인이가능합니다.</h5>
+					<h5 class="section-subheading">
+						원하시는 내용을 써서 보내주세요. 답변해드리겠습니다. <br>
+						<br> 회원일시 이메일과, 홈페이지에서 답변확인이 가능합니다. <br> 비회원일시에는 이메일로만
+						확인이가능합니다.
+					</h5>
 				</div>
 			</div>
 			<div class="row">
@@ -247,23 +251,23 @@
 							<div class="form-group">
 								<input type="text" class="form-control" placeholder="이름"
 									id="uName">
-								<p class="help-name text-danger"></p>
+								<p class="help-text"></p>
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control"
 									placeholder="답변을 위해 이메일은 제대로 적어주시길 바랍니다." id="uEmail">
-								<p class="help-email text-danger"></p>
+								<p class="help-text"></p>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="휴대폰 번호"
-									id="uTel">
-								<p class="help-tel text-danger"></p>
+								<input type="text" class="form-control"
+									placeholder="휴대폰 번호(-)제외" id="uTel" maxlength="11">
+								<p class="help-text"></p>
 							</div>
 						</div>
 						<div class="col-md-6">
 							<div class="form-group">
 								<textarea class="form-control" placeholder="상담 내용" id="uMessage"></textarea>
-								<p class="help-message text-danger"></p>
+								<p class="help-text"></p>
 							</div>
 						</div>
 						<div class="clearfix"></div>
@@ -310,25 +314,46 @@
 		<div class="font-position">
 			<i class="btnJoinClose fa fa-times fa-2" aria-hidden="true"></i>
 		</div>
-			<div class="form-group">
-			<label for="name">이름 : </label>
-			<input type="text" class="form-control" id="name" placeholder="이름">
+		<div class="form-group">
+			<label for="name">이름 : </label> <input type="text"
+				class="form-control" id="name" placeholder="이름">
 		</div>
 		<div class="form-group">
-			<label for="email">이메일 : </label>
-			<input type="text" class="form-control" id="email" placeholder="현재 쓰시는 이메일을 적어주시길 바랍니다.">
+			<label for="email">이메일 : </label> <input type="text"
+				class="form-control" id="email"
+				placeholder="현재 쓰시는 이메일을 적어주시길 바랍니다.">
 		</div>
 		<div class="form-group">
-			<label for="pwd">비밀번호 :</label>
-			<input type="password" class="form-control" id="pwd" placeholder="비밀번호">
+			<label for="pwd">비밀번호 :</label> <input type="password"
+				class="form-control" id="pwd" placeholder="비밀번호">
 		</div>
 		<div class="form-group">
-			<label for="currentpwd">비밀번호확인 :</label>
-			<input type="password" class="form-control" id="currentpwd" placeholder="비밀번호확인">
+			<label for="currentpwd">비밀번호확인 :</label> <input type="password"
+				class="form-control" id="currentpwd" placeholder="비밀번호확인">
 		</div>
 		<div class="bottom-button">
 			<button class="btnJoin btn btn-primary">회원가입</button>
 			<button class="btnJoinClose btn btn-default">취소</button>
+		</div>
+	</section>
+
+		<section id="find-form">
+		<div class="font-position">
+			<i class="btnfindClose fa fa-times fa-2" aria-hidden="true"></i>
+		</div>
+		<div class="form-group">
+			<label for="find-email">사용하시던 이메일 :</label> <input type="text"
+				class="form-control" id="find-email" placeholder="이메일">
+
+		</div>
+		<div class="form-group">
+			<label for="find-pw">이름 :</label> <input type="text"
+				class="form-control" id="find-name" placeholder="이름">
+		</div>
+
+		<div class="bottom-button">
+			<button class="btnfind btn btn-success">확인</button>
+			<button class="btnfindClose btn btn-default">취소</button>
 		</div>
 	</section>
 
@@ -368,7 +393,6 @@
 							<div class="modal-body">
 								<!-- Project Details Go Here -->
 								<h2>입원실 내부모습입니다.</h2>
-								<p class="item-intro text-muted">--------TEST---------</p>
 								<img class="img-responsive img-centered"
 									src="/static/plugins/img/portfolio/입원실1.jpg" alt="">
 								<p>안녕하세요. 스카이정형외과 입원실 내부모습입니다.</p>
@@ -399,7 +423,6 @@
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
 								<h2>입원실 두번쨰모습입니다.</h2>
-								<p class="item-intro text-muted">-----TEST-----</p>
 								<img class="img-responsive img-centered"
 									src="/static/plugins/img/portfolio/입원실2.jpg" alt="">
 								<p>안녕하세요. 스카이정형외과 입원실 내부모습입니다.</p>
@@ -430,7 +453,6 @@
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
 								<h2>입원실 세번쨰모습입니다.</h2>
-								<p class="item-intro text-muted">------TEST-------</p>
 								<img class="img-responsive img-centered"
 									src="/static/plugins/img/portfolio/입원실3.jpg" alt="">
 								<p>안녕하세요. 스카이정형외과 입원실 내부모습입니다.</p>
@@ -461,7 +483,6 @@
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
 								<h2>스카이정형외과 수술실 내부입니다.</h2>
-								<p class="item-intro text-muted">----TEST----</p>
 								<img class="img-responsive img-centered"
 									src="/static/plugins/img/portfolio/수술실1.jpg" alt="">
 								<p>안녕하세요. 스카이정형외과 수술실입니다.</p>
@@ -492,7 +513,6 @@
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
 								<h2>스카이정형외과 방사선실 내부입니다.</h2>
-								<p class="item-intro text-muted">---TEST----</p>
 								<img class="img-responsive img-centered"
 									src="/static/plugins/img/portfolio/방사선실 (1).JPG" alt="">
 								<p>안녕하세요. 스카이정형외과 방사선실입니다.</p>
@@ -522,8 +542,7 @@
 					<div class="row">
 						<div class="col-lg-8 col-lg-offset-2">
 							<div class="modal-body">
-								<h2>사진</h2>
-								<p class="item-intro text-muted">TEST</p>
+								<h2>방사선실</h2>
 								<img class="img-responsive img-centered"
 									src="/static/plugins/img/portfolio/방사선실 (1).JPG" alt="">
 								<button type="button" class="btn btn-primary"
@@ -548,7 +567,7 @@
 	<script src="/static/plugins/js/jqBootstrapValidation.js"></script>
 	<script src="/static/plugins/js/contact_me.js"></script>
 	<script src="/static/plugins/js/agency.js"></script>
-
+	<script src="/static/plugins/js/common.js"></script>
 	<script src="/static/plugins/js/main.js"></script>
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl4ru4utIETl0wXbGlo2pzeUJ-xJfYnKo"></script>
