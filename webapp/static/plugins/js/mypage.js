@@ -12,15 +12,27 @@ $(document).ready(function() {
 		location.href="/api/security/logout";
 	})
 
-
 	$(".security-setting").on("click", function() {
-		console.log(pageNum);
+		openPwConfirm();
 	});
 
 	$(".cosult-data-open").on("click", function() {
 		showConsultData();
 	});
 
+	function keyUpEvent(divName, btnClassName){
+		$(divName +" input").on("keyup", function(event) {
+			if (event.keyCode != 13) {
+				return;
+			}
+			$(btnClassName).click();
+		})
+	}
+
+	keyUpEvent(".security-inputPw", ".btnInputPwd");
+	keyUpEvent(".modify-form", ".btnModifyData");
+
+	var isPw = /^[A-za-z0-9'\-=\\\[\];',\./~!@#\$%\^&\*\(\)_\+|\{\}:"<>\?]{6,16}$/;
 	var pageNum = 0;
 
 	var itemsPerPage = 3;
@@ -40,9 +52,81 @@ $(document).ready(function() {
 		$(".top-greeting-text").html(result.name + "님 반갑습니다.");
 		$(".mydata").append("이름 : " + result.name);
 		$(".mydata").append("<br> 이메일 : " + result.email);
-		$(".mydata").append("<br><br> <button class='modifydata btn btn-default'>정보수정</button>")
+		$(".mydata").append("<br><br> <button class='modifyData btn btn-default'>정보수정</button>")
 		getConsultCount(result.name);
-		$(".modifydata").on("click", function() {
+		$(".modifyData").on("click", function() {
+			openPwConfirm();
+		})
+	})
+
+	function openPwConfirm() {
+		$(".mydata-border-table").hide();
+		$(".consult-border-table").hide();
+		$(".consult-table").hide();
+		$(".reply-consult").hide();
+		$(".modify-form").hide();
+		$(".security-inputPw").css("display", "inline-block");
+	}
+
+	function showConsultData(){
+		$(".mydata-border-table").hide();
+		$(".consult-border-table").hide();
+		$(".security-inputPw").hide();
+		$(".modify-form").hide();
+		$(".consult-table").css("display", "inline-block");
+		getConsult(currentPage);
+	}
+
+	$(".btnInputPwd").on("click", function() {
+
+		if($("#input-password").val().trim() == "") {
+			alert("비밀번호를 입력해주세요.");
+			$("#input-password").focus();
+			$("#input-password").val("");
+			return;
+		}
+
+		callAjax({
+			url : "/api/security/check/pwd",
+			method : "POST",
+			data : {
+				password : $("#input-password").val()
+			},
+			success : function(result) {
+				alert(result.success);
+				$(".security-inputPw").hide();
+				$("#input-password").val("");
+				$(".modify-form").css("display", "inline-block");
+			}
+		})
+	})
+
+	$(".btnModifyData").on("click", function() {
+		var newPassword = $("#modify-password").val();
+		var currentPassword = $("#modify-currentPassword").val();
+
+		if (!isPw.test(newPassword)) {
+			alert("비밀번호는 6~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.");
+			$(".modify-password").focus();
+			return;
+		}
+
+		if (newPassword != currentPassword) {
+			alert("수정하실 비밀번호와 비밀번호 재확인이 맞지않습니다.");
+			$(".modify-password").val("");
+			$(".modify-currentPassword").focus();
+			return;
+		}
+
+		callAjax({
+			url : "/api/modify/data",
+			data : {
+				password : newPassword
+			},
+			success : function(result) {
+				alert(result.success);
+				location.reload();
+			}
 		})
 	})
 
@@ -99,7 +183,6 @@ $(document).ready(function() {
 
 				var consultVO = consultArray[i];
 
-
 				$(".reply-consult").show();
 				$(".reply-consult").css("height", "550px");
 				$("#user-message").val(consultVO.message);
@@ -137,12 +220,6 @@ $(document).ready(function() {
 		})
 	}
 
-	function showConsultData(){
-		$(".mydata-border-table").hide();
-		$(".consult-border-table").hide();
-		$(".consult-table").css("display", "inline-block");
-		getConsult(currentPage);
-	}
 
 	function drawPaging(totalCount) {
 		firstPage = parseInt((currentPage - 1) / pagingRange) * pagingRange + 1;

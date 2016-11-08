@@ -24,10 +24,6 @@ $(document).ready(function() {
 		}
 	})
 
-	$(".findPassword").on("click", function() {
-		loginFadeOut();
-		findFadeIn();
-	})
 
 	function loginMode(name, email){
 		if (name != "" && email != ""){
@@ -87,10 +83,12 @@ $(document).ready(function() {
 
 		if (pageText == "#login") {
 			joinFadeOut();
+			findFadeOut();
 			loginFadeIn();
 			$("#user-email").focus();
 		} else if (pageText == "#join") {
 			loginFadeOut();
+			findFadeOut();
 			joinFadeIn();
 			$("#name").focus();
 		} else if (pageText == "#logout") {
@@ -111,12 +109,24 @@ $(document).ready(function() {
 		$("#currentpwd").val("");
 	});
 
-	$("#login-form input").on("keyup", function(event) {
-		if (event.keyCode != 13) {
-			return;
-		}
-		$(".btnLogin").click();
+	$(".findPassword").on("click", function() {
+		loginFadeOut();
+		findFadeIn();
+		$("#user-pw").val("");
 	})
+
+	function keyUpEvent(divName, btnClassName) {
+
+		$(divName + " input").on("keyup", function(event) {
+			if (event.keyCode != 13) {
+				return;
+			}
+			$(btnClassName).click();
+		})
+	}
+
+	keyUpEvent("#login-form", ".btnLogin");
+	keyUpEvent("#find-form", ".btnfind");
 
 
 	$(".btnLogin").on("click", function() {
@@ -144,7 +154,7 @@ $(document).ready(function() {
 			},
 			success : function(result) {
 				alert(result.mName + "님 반갑습니다.");
-				location.href="/";
+				location.href= result.href;
 			}
 		})
 	});
@@ -184,7 +194,7 @@ $(document).ready(function() {
 			$("#email").focus();
 			return;
 		} else if (password == "" || !isPw.test(password)) {
-			alert("비밀번호가 제대로 입력되지않았습니다.");
+			alert("비밀번호는 6~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.");
 			$("#pwd").focus();
 			return;
 		} else if (currentPassword == "") {
@@ -210,6 +220,15 @@ $(document).ready(function() {
 	});
 
 	$(".btnfind").on("click", function() {
+
+		if (!isEmail.test($("#find-email").val())) {
+			alert("이메일을 제대로 적어주세요.");
+			return;
+		} else if (!isName.test($("#find-name").val())) {
+			alert("이름을 제대로 적어주세요.");
+			return;
+		}
+
 		callAjax({
 			url : "/api/send/findPw",
 			method : "POST",
@@ -219,6 +238,7 @@ $(document).ready(function() {
 			},
 			success : function(result) {
 				alert(result.success);
+				location.href = "/";
 			}
 		});
 	})

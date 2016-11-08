@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.hanbit.team05.core.service.MemberService;
 import com.hanbit.team05.core.service.SecurityService;
 import com.hanbit.team05.core.session.LoginRequired;
+import com.hanbit.team05.core.session.Session;
+import com.hanbit.team05.core.session.SessionHelper;
 import com.hanbit.team05.core.vo.MemberVO;
 
 @Controller
@@ -40,17 +42,30 @@ public class MemberController {
 
 	@LoginRequired
 	@RequestMapping("/member/mypage")
-	public String myPage(){
+	public String myPage() {
 
-		return "mypage";
+		String path = "mypage";
+
+		Session session = SessionHelper.getSession();
+
+		if (session.getEmail().equals("admin")) {
+			path = "admin";
+		}
+
+		return path;
 	}
 
 	@RequestMapping("/api/mypage/data")
 	@ResponseBody
-	public MemberVO getMember(){
+	public MemberVO getMember() {
 
 		MemberVO result = memberService.getMember();
 		return result;
 	}
 
+	@RequestMapping("/api/modify/data")
+	@ResponseBody
+	public Map modifyData(@RequestParam("password") String password) {
+		return memberService.modifyData(password);
+	}
 }

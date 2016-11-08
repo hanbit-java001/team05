@@ -14,6 +14,8 @@ import org.springframework.stereotype.Service;
 
 import com.hanbit.team05.core.dao.ConsultDAO;
 import com.hanbit.team05.core.dao.MemberDAO;
+import com.hanbit.team05.core.session.Session;
+import com.hanbit.team05.core.session.SessionHelper;
 import com.hanbit.team05.core.vo.EmailVO;
 import com.hanbit.team05.core.vo.MemberVO;
 
@@ -67,8 +69,9 @@ public class EmailService {
 
 
 		MemberVO member = memberDAO.selectMember(toAddress);
+		Session session = SessionHelper.getSession();
 
-		if (member == null) {
+		if (member == null || !member.getName().equals(name)) {
 			throw new RuntimeException("존재하지 않는 회원입니다.");
 		}
 		Map data = new HashMap<>();

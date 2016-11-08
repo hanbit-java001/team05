@@ -15,18 +15,12 @@ footer {
 		text-align: center;
 		background-color: #eee;
 	}
-	.navbar>.container .navbar-brand-centered, .navbar>.container-fluid .navbar-brand-centered, .top-greeting
-	{
+	.navbar>.container .navbar-brand-centered, .navbar>.container-fluid .navbar-brand-centered,
+		.top-greeting {
 		margin-left: -80px;
 	}
-
 }
 
-@media (max-width : 767px) {
-	.navbar-right .top-greeting {
-		margin-left: 15px;
-	}
-}
 .navbar-default .navbar-brand {
 	font-family: '나눔바른펜';
 	font-weight: bold;
@@ -34,8 +28,9 @@ footer {
 }
 
 .logo {
- 	text-align: center;
+	text-align: center;
 }
+
 .navbar-brand {
 	background-color: #ffffff;
 }
@@ -80,22 +75,6 @@ footer {
 	margin-right: auto;
 }
 
-@media ( max-width :553px ) {
-
-	.mydata-border-table, .consult-border-table{
-		width: 100%;
-	}
-
-}
-
-@media ( max-width :311px ) {
-
-	.consult-border-table{
-		height: 200px;
-	}
-
-}
-
 .get-Text {
 	transform: translateY(50%);
 }
@@ -112,6 +91,7 @@ footer {
 	border: solid 1px;
 	border-color: #4e9dfe;
 }
+
 .consult-container {
 	text-align: center;
 }
@@ -125,14 +105,8 @@ footer {
 	width: 300px;
 }
 
-@media (max-width : 916px) {
-	.consult-table {
-		width: 100%;
-	}
-}
-
 .reply-consult {
-	display : none;
+	display: none;
 	border: solid 1px;
 	border-color: black;
 	border-radius: 5px;
@@ -146,13 +120,69 @@ footer {
 	margin-left: auto;
 }
 
-.consult-hover:HOVER{
+.consult-hover:HOVER {
 	border-bottom: solid 1px black;
 	cursor: pointer;
 }
 
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control
+	{
 	background-color: white;
 }
 
+.security-container {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.security-inputPw {
+	display: none;
+	width: 250px;
+}
+
+.modify-container {
+	text-align: center;
+}
+
+.modify-form {
+	display: none;
+	width: 250px;
+}
+
+@media ( max-width : 816px) {
+	.reply-consult, .consult-table {
+		width: 100%;
+	}
+}
+
+@media ( max-width : 317px) {
+	.security-inputPw {
+		width: 100%;
+	}
+}
+
+@media ( max-width : 767px) {
+	.navbar-right .top-greeting {
+		margin-left: 15px;
+	}
+}
+
+@media ( max-width :553px ) {
+	.mydata-border-table, .consult-border-table {
+		width: 100%;
+	}
+}
+
+@media ( max-width :311px ) {
+	.consult-border-table {
+		height: 200px;
+	}
+}
+
+@media ( max-width : 916px) {
+	.consult-table {
+		width: 100%;
+	}
+}
 

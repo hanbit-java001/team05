@@ -94,17 +94,48 @@
 		</div>
 
 		<div class="reply-consult">
-				<div>
-					<label for="user-message">글내용 : </label>
-					<textarea class="form-control" id="user-message" rows="10"></textarea>
-				</div>
-				<br>
-				<div>
-					<label for="message" class="message-label">답변 내용 : </label>
-					<textarea class="form-control" id="message" rows="10"></textarea>
-				</div>
+			<div>
+				<label for="user-message">글내용 : </label>
+				<textarea class="form-control" id="user-message" rows="10"></textarea>
+			</div>
+			<br>
+			<div>
+				<label for="message" class="message-label">답변 내용 : </label>
+				<textarea class="form-control" id="message" rows="10"></textarea>
 			</div>
 		</div>
+	</div>
+
+	<div class="security-container">
+		<div class="security-inputPw">
+			<div class="form-group">
+				<label for="input-password">보안을 위해 패스워드를 적어주세요.</label> <input
+					type="password" class="form-control" id="input-password"
+					placeholder="비밀번호 입력">
+			</div>
+			<div class="bottom-button">
+				<button class="btnInputPwd btn btn-primary btn-block">확인</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="modify-container">
+		<div class="modify-form">
+			<div class="form-group">
+				<label for="modify-password">수정하실 비밀번호를 입력해주세요.</label> <input
+					type="password" class="form-control" id="modify-password"
+					placeholder="비밀번호">
+			</div>
+			<div class="form-group">
+				<label for="modify-password">비밀번호 재확인</label> <input
+					type="password" class="form-control" id="modify-currentPassword"
+					placeholder="비밀번호재확인">
+			</div>
+			<div class="bottom-button">
+				<button class="btnModifyData btn btn-primary btn-block">수정하기</button>
+			</div>
+		</div>
+	</div>
 
 	<footer>
 		<div class="container">
@@ -124,6 +155,7 @@
 			</div>
 		</div>
 	</footer>
+
 </body>
 <script src="/static/plugins/jquery/jquery-3.1.0.min.js"></script>
 

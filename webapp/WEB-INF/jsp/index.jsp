@@ -89,16 +89,6 @@
 			<div class="row">
 				<div class="col-lg-12 text-center">
 					<div id="myCarousel" class="carousel slide" data-ride="carousel">
-<!-- 						<h2 class="section-heading">병원소개</h2> -->
-						<!-- 						Indicators -->
-						<!-- 						<ol class="carousel-indicators"> -->
-						<!-- 							<li data-target="#myCarousel" data-slide-to="0" class="active"></li> -->
-						<!-- 							<li data-target="#myCarousel" data-slide-to="1"></li> -->
-						<!-- 							<li data-target="#myCarousel" data-slide-to="2"></li> -->
-						<!-- 							<li data-target="#myCarousel" data-slide-to="3"></li> -->
-						<!-- 						</ol> -->
-
-						<!-- Wrapper for slides -->
 						<div class="carousel-inner" role="listbox">
 							<a class="left carousel-control" href="#myCarousel" role="button"
 								data-slide="prev"> <span
@@ -123,6 +113,7 @@
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
 
 
@@ -238,9 +229,8 @@
 				<div class="col-lg-12 text-center">
 					<h4 class="section-subheading">상담접수</h4>
 					<h5 class="section-subheading">
-						원하시는 내용을 써서 보내주세요. 답변해드리겠습니다. <br>
-						<br> 회원일시 이메일과, 홈페이지에서 답변확인이 가능합니다. <br> 비회원일시에는 이메일로만
-						확인이가능합니다.
+						원하시는 내용을 써서 보내주세요. 답변해드리겠습니다. <br> <br> 회원일시 이메일과,
+						홈페이지에서 답변확인이 가능합니다. <br> 비회원일시에는 이메일로만 확인이가능합니다.
 					</h5>
 				</div>
 			</div>
@@ -295,7 +285,6 @@
 		<div class="form-group">
 			<label for="user-email">이메일 : </label> <input type="text"
 				class="form-control" id="user-email" placeholder="이메일">
-
 		</div>
 		<div class="form-group">
 			<label for="user-pw">비밀번호 :</label> <input type="password"
@@ -337,7 +326,7 @@
 		</div>
 	</section>
 
-		<section id="find-form">
+	<section id="find-form">
 		<div class="font-position">
 			<i class="btnfindClose fa fa-times fa-2" aria-hidden="true"></i>
 		</div>

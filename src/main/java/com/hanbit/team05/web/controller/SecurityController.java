@@ -42,8 +42,19 @@ public class SecurityController {
 
 		Map result = new HashMap<>();
 		result.put("mName", member.getName());
+		result.put("href", "/");
+
+		if (session.getEmail().equals("admin")) {
+			result.put("href", "/admin/page");
+		}
 
 		return result;
+	}
+
+	@RequestMapping("/api/security/check/pwd")
+	@ResponseBody
+	public Map doCheckPwd(@RequestParam("password") String password){
+		return securitySerivce.checkPwd(password);
 	}
 
 	@RequestMapping(value="/api/security/isLoggedIn",method=RequestMethod.GET)

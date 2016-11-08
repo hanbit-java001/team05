@@ -137,3 +137,6 @@ footer {
 	font-size: 12px;
 	color: black;
 }
+section #about {
+	display: none;
+}

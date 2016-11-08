@@ -1,5 +1,8 @@
 package com.hanbit.team05.core.service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -44,6 +47,27 @@ public class MemberService {
 		String email = session.getEmail();
 
 		return memberDAO.selectMember(email);
+	}
+
+	public Map modifyData(String password) {
+
+		Session session = SessionHelper.getSession();
+		String email = session.getEmail();
+
+		Map data = new HashMap<>();
+		data.put("password", securityService.encryptPassword(password));
+		data.put("email", email);
+
+		int dataModifyResult = memberDAO.modifyMember(data);
+
+		if (dataModifyResult != 1) {
+			throw new RuntimeException("비밀번호를 수정하는도중 에러가 발생하였습니다. 다시시도해주세요.");
+		}
+
+		Map result = new HashMap<>();
+		result.put("success", "정상적으로 수정하였습니다.");
+
+		return result;
 	}
 
 }
