@@ -28,7 +28,7 @@
 	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
 	rel='stylesheet' type='text/css'>
 
-<link href="/static/plugins/css/main.css" rel="stylesheet">
+<link href="/static/css/main.css" rel="stylesheet">
 <link href="/static/plugins/css/agency.css" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -556,8 +556,8 @@
 	<script src="/static/plugins/js/jqBootstrapValidation.js"></script>
 	<script src="/static/plugins/js/contact_me.js"></script>
 	<script src="/static/plugins/js/agency.js"></script>
-	<script src="/static/plugins/js/common.js"></script>
-	<script src="/static/plugins/js/main.js"></script>
+	<script src="/static/js/common.js"></script>
+	<script src="/static/js/main.js"></script>
 	<script
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBl4ru4utIETl0wXbGlo2pzeUJ-xJfYnKo"></script>
 

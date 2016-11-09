@@ -2,8 +2,7 @@ package com.hanbit.team05.core.service;
 
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.management.RuntimeErrorException;
+import java.util.Random;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,7 +15,6 @@ import com.hanbit.team05.core.dao.ConsultDAO;
 import com.hanbit.team05.core.dao.MemberDAO;
 import com.hanbit.team05.core.session.Session;
 import com.hanbit.team05.core.session.SessionHelper;
-import com.hanbit.team05.core.vo.EmailVO;
 import com.hanbit.team05.core.vo.MemberVO;
 
 @Service
@@ -24,7 +22,6 @@ public class EmailService {
 
 	@Autowired
 	private MailSender mailSender;
-
 	@Autowired
 	private ConsultDAO consultDAO;
 	@Autowired
@@ -74,9 +71,25 @@ public class EmailService {
 		if (member == null || !member.getName().equals(name)) {
 			throw new RuntimeException("존재하지 않는 회원입니다.");
 		}
+
+		String[] stringArray = {"a","b","c","d","e","f","g","h","i","j","k","l","n","m","o","p","q","r","s","t","u","v","w","x","y","z"};
+
+		int randomNumber1 = new Random().nextInt(10000)+100;
+		int randomNumber2 =	new Random().nextInt(30000)+100;
+		int totalRandom = (randomNumber1 + randomNumber2) ^+ 100;
+
+		String temporarilyPassword = "";
+
+		for (int i = 0; i < 4; i++) {
+			int randomNumber = new Random().nextInt(stringArray.length)+0;
+			temporarilyPassword += stringArray[randomNumber];
+		}
+
+		temporarilyPassword += String.valueOf(totalRandom);
+
 		Map data = new HashMap<>();
 		data.put("email", toAddress);
-		data.put("password", securityService.encryptPassword("abcd1234"));
+		data.put("password", securityService.encryptPassword(temporarilyPassword));
 
 		memberDAO.modifyMember(data);
 
@@ -85,7 +98,7 @@ public class EmailService {
 		String subject = "안녕하세요 스카이정형외과입니다." + name;
 		subject += "님 임시 비밀번호입니다.";
 		String text = "안녕하세요 스카이정형외과입니다.\n";
-		text += name + "님의 임시 비밀번호는 abcd1234 입니다.";
+		text += name + "님의 임시 비밀번호는" + temporarilyPassword + "입니다.";
 
 		message.setFrom("iiedby2500@naver.com");
 		message.setTo(toAddress);

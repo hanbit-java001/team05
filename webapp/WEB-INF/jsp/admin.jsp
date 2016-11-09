@@ -26,10 +26,10 @@
 	href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700'
 	rel='stylesheet' type='text/css'>
 
-<link href="/static/plugins/css/main.css" rel="stylesheet">
+<link href="/static/css/main.css" rel="stylesheet">
 <link href="/static/plugins/css/agency.css" rel="stylesheet">
-<link href="/static/plugins/css/mypage.css" rel="stylesheet">
-<link href="/static/plugins/css/admin.css" rel="stylesheet">
+<link href="/static/css/mypage.css" rel="stylesheet">
+<link href="/static/css/admin.css" rel="stylesheet">
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!-- [if lt IE 9] -->
@@ -139,6 +139,6 @@
 <script src="/static/plugins/js/jqBootstrapValidation.js"></script>
 <script src="/static/plugins/js/contact_me.js"></script>
 <script src="/static/plugins/js/agency.js"></script>
-<script src="/static/plugins/js/common.js"></script>
-<script src="/static/plugins/js/admin.js"></script>
+<script src="/static/js/common.js"></script>
+<script src="/static/js/admin.js"></script>
 </html>
