@@ -119,6 +119,7 @@
 
 	<!-- Cta section -->
 	<section id="cta">
+		<img alt="" src="/static/plugins/img/실내용 배너.jpg">
 		<div class="cta-content">
 			<div class="container"></div>
 		</div>

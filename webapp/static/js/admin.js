@@ -83,9 +83,9 @@ $(document).ready(function() {
 				$(".reply-consult").show();
 				$("#user-message").attr("readonly", true);
 				$("#message").focus();
-			})
+			});
 			drawPaging(result.totalCount);
-		})
+		});
 	}
 
 
@@ -131,7 +131,8 @@ $(document).ready(function() {
 				location.reload();
 			}
 		})
-	})
+	});
+
 	function drawPaging(totalCount) {
 
 		firstPage = parseInt((currentPage - 1) / pagingRange) * pagingRange + 1;

@@ -314,9 +314,10 @@ section#cta {
 	background-size: contain;
 	background-repeat: no-repeat;
 	-o-background-size: cover;
-	background-position: center;
-	background-image: url('../img/인사말.png');
-	padding: 250px 0;
+	text-align: center;
+/* 	background-position: center; */
+/* 	background-image: url('../img/실내용 배너.jpg'); */
+/* 	padding: 250px 0; */
 }
 
 .service-heading {
